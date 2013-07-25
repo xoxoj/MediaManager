@@ -1,0 +1,966 @@
+TMediaManager
+v5
+r1
+cCheck dependencies
+cProcessPCH /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH++ /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o /Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o /Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o /Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o /Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o /Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o /Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o /Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a normal armv7
+cPBXCp MediaManager/MediaManager.h build/Debug-iphoneos/include/MediaManager/MediaManager.h
+cPhaseScriptExecution "Run Script" /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+c0000000051BAD1140000000000000110
+t1371197716
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c0000000051A8472C000000000036CDF0
+t1369982764
+s3591664
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c0000000051A8472C00000000000064F0
+t1369982764
+s25840
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000051A8472C00000000006B1F40
+t1369982764
+s7020352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c0000000051A8472C00000000000FE270
+t1369982764
+s1041008
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000051A8472C0000000000322700
+t1369982764
+s3286784
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+c0000000051A8472C0000000000228E60
+t1369982764
+s2264672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c0000000051A8472C00000000001694D0
+t1369982764
+s1479888
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c0000000051A8472C0000000000041310
+t1369982764
+s267024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000051A8472D000000000062AD10
+t1369982765
+s6466832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000051A8472C00000000000015F7
+t1369982764
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c0000000051A8472D0000000000024190
+t1369982765
+s147856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000051A8472D00000000003596B0
+t1369982765
+s3511984
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000051A8472F00000000011BCDF0
+t1369982767
+s18599408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib
+c0000000051A84730000000000003D5D0
+t1369982768
+s251344
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib
+c0000000051A847300000000000151880
+t1369982768
+s1382528
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib
+c0000000051A847300000000000022520
+t1369982768
+s140576
+
+N/Volumes/mac2/github/MediaManager/MediaManager/MediaManager-Prefix.pch
+c0000000051EE36BB00000000000000A5
+t1374566075
+s165
+i<Foundation/Foundation.h>
+
+N/Volumes/mac2/github/MediaManager/MediaManager/MediaManager.h
+c0000000051F08FDA0000000000000514
+t1374719962
+s1300
+
+N/Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m
+c0000000051F099CD0000000000004506
+t1374722509
+s17670
+
+N/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include/MediaManager/MediaManager.h
+t1374719981
+s1300
+
+N/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a
+t1374722669
+s15022608
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o
+t1374566306
+s34488
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o
+t1374566306
+s21872
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o
+t1374566306
+s65476
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o
+t1374566306
+s72948
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o
+t1374566306
+s103088
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o
+t1374566306
+s24508
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o
+t1374719962
+s34316
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o
+t1374566306
+s29016
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o
+t1374722669
+s142416
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o
+t1374719962
+s58048
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.LinkFileList
+c0000000051EE37A20000000000000613
+t1374566306
+s1555
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o
+t1374722543
+s197916
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o
+t1374566306
+s111776
+
+N/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh
+c0000000051EE37A200000000000000D9
+t1374566306
+s217
+
+N/Volumes/mac2/github/MediaManager/corelibs/Global.h
+c0000000051F08F3700000000000001BE
+t1374719799
+s446
+
+N/Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.h
+c0000000051EE36BB00000000000002D2
+t1374566075
+s722
+
+N/Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m
+c0000000051EE36BB000000000000223E
+t1374566075
+s8766
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.h
+c0000000051EE36BB00000000000002A3
+t1374566075
+s675
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m
+c0000000051EE36BB0000000000001416
+t1374566075
+s5142
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.h
+c0000000051EE36BB00000000000004AA
+t1374566075
+s1194
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m
+c0000000051EE36BB0000000000003873
+t1374566075
+s14451
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.h
+c0000000051EE36BB000000000000036F
+t1374566075
+s879
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m
+c0000000051EE36BB000000000000170C
+t1374566075
+s5900
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.h
+c0000000051EE378D000000000000021A
+t1374566285
+s538
+
+N/Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m
+c0000000051EE393B0000000000000CEC
+t1374566715
+s3308
+
+N/Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.h
+c0000000051EE36BB0000000000000349
+t1374566075
+s841
+
+N/Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m
+c0000000051EE36BB00000000000027E7
+t1374566075
+s10215
+
+N/Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.h
+c0000000051EE36BB0000000000000213
+t1374566075
+s531
+
+N/Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m
+c0000000051EE36BB0000000000000CC9
+t1374566075
+s3273
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.h
+c0000000051EE36BB000000000000012B
+t1374566075
+s299
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m
+c0000000051EE36BB0000000000003785
+t1374566075
+s14213
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.h
+c0000000051EE36BB000000000000044B
+t1374566075
+s1099
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m
+c0000000051EE36BB000000000000175E
+t1374566075
+s5982
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.h
+c0000000051F08FDA0000000000000751
+t1374719962
+s1873
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m
+c0000000051F09A6C000000000000538E
+t1374722668
+s21390
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.h
+c0000000051EE36BB00000000000008CC
+t1374566075
+s2252
+
+N/Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm
+c0000000051F09DE400000000000042EA
+t1374723556
+s17130
+
+N/Volumes/mac2/github/MediaManager/external/include/libavcodec/avcodec.h
+c0000000051EE36BB0000000000028631
+t1374566075
+s165425
+
+N/Volumes/mac2/github/MediaManager/external/include/libavcodec/old_codec_ids.h
+c0000000051EE36BB00000000000029A3
+t1374566075
+s10659
+
+N/Volumes/mac2/github/MediaManager/external/include/libavcodec/opt.h
+c0000000051EE36BB0000000000001CC4
+t1374566075
+s7364
+
+N/Volumes/mac2/github/MediaManager/external/include/libavcodec/version.h
+c0000000051EE36BB0000000000000CFB
+t1374566075
+s3323
+
+N/Volumes/mac2/github/MediaManager/external/include/libavformat/avformat.h
+c0000000051EE36BB0000000000012AA9
+t1374566075
+s76457
+
+N/Volumes/mac2/github/MediaManager/external/include/libavformat/avio.h
+c0000000051EE36BB0000000000004171
+t1374566075
+s16753
+
+N/Volumes/mac2/github/MediaManager/external/include/libavformat/version.h
+c0000000051EE36BB0000000000000C6F
+t1374566075
+s3183
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/attributes.h
+c0000000051EE36BB0000000000000F56
+t1374566075
+s3926
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/audioconvert.h
+c0000000051EE36BB000000000000208E
+t1374566075
+s8334
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/avconfig.h
+c0000000051EE36BB00000000000000D2
+t1374566075
+s210
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/avutil.h
+c0000000051EE36BB0000000000001772
+t1374566075
+s6002
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/bswap.h
+c0000000051EE36BB0000000000000B24
+t1374566075
+s2852
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/common.h
+c0000000051EE36BB0000000000003016
+t1374566075
+s12310
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/cpu.h
+c0000000051EE36BB0000000000000FFA
+t1374566075
+s4090
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/dict.h
+c0000000051EE36BB0000000000001346
+t1374566075
+s4934
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/error.h
+c0000000051EE36BB0000000000001200
+t1374566075
+s4608
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/imgutils.h
+c0000000051EE36BB0000000000001E01
+t1374566075
+s7681
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/intfloat.h
+c0000000051EE36BB00000000000006BA
+t1374566075
+s1722
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/intfloat_readwrite.h
+c0000000051EE36BB00000000000005D0
+t1374566075
+s1488
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/intreadwrite.h
+c0000000051EE36BB00000000000039E2
+t1374566075
+s14818
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/log.h
+c0000000051EE36BB0000000000001AE0
+t1374566075
+s6880
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/mathematics.h
+c0000000051EE36BB0000000000000F3A
+t1374566075
+s3898
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/mem.h
+c0000000051EE36BB0000000000001C5D
+t1374566075
+s7261
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/pixdesc.h
+c0000000051EE36BB0000000000001D21
+t1374566075
+s7457
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/pixfmt.h
+c0000000051EE36BB0000000000004544
+t1374566075
+s17732
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/rational.h
+c0000000051EE36BB0000000000000F67
+t1374566075
+s3943
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/samplefmt.h
+c0000000051EE36BB0000000000002486
+t1374566075
+s9350
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/time.h
+c0000000051EE36BB0000000000000503
+t1374566075
+s1283
+
+N/Volumes/mac2/github/MediaManager/external/include/libavutil/version.h
+c0000000051EE36BB0000000000000AE0
+t1374566075
+s2784
+
+N/Volumes/mac2/github/MediaManager/external/include/libswresample/swresample.h
+c0000000051EE36BB0000000000002002
+t1374566075
+s8194
+
+N/Volumes/mac2/github/MediaManager/external/include/libswscale/swscale.h
+c0000000051EE36BB0000000000002EAC
+t1374566075
+s11948
+
+N/Volumes/mac2/github/MediaManager/external/include/libswscale/version.h
+c0000000051EE36BB0000000000000846
+t1374566075
+s2118
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv.h
+c0000000051EE36BB00000000000003B1
+t1374566075
+s945
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/basic_types.h
+c0000000051EE36BB000000000000077B
+t1374566075
+s1915
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/compare.h
+c0000000051EE36BB0000000000000916
+t1374566075
+s2326
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/convert.h
+c0000000051EE36BB00000000000022AD
+t1374566075
+s8877
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/convert_argb.h
+c0000000051EE36BB0000000000001EAB
+t1374566075
+s7851
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/convert_from.h
+c0000000051EE36BB0000000000001599
+t1374566075
+s5529
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/cpu_id.h
+c0000000051EE36BB0000000000000760
+t1374566075
+s1888
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/format_conversion.h
+c0000000051EE36BB00000000000016FE
+t1374566075
+s5886
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/planar_functions.h
+c0000000051EE36BB0000000000002746
+t1374566075
+s10054
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/rotate.h
+c0000000051EE36BB000000000000070C
+t1374566075
+s1804
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/rotate_argb.h
+c0000000051EE36BB00000000000003C0
+t1374566075
+s960
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/scale.h
+c0000000051EE36BB0000000000000ABF
+t1374566075
+s2751
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/scale_argb.h
+c0000000051EE36BB00000000000003DF
+t1374566075
+s991
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/version.h
+c0000000051EE36BB0000000000000233
+t1374566075
+s563
+
+N/Volumes/mac2/github/MediaManager/external/include/libyuv/libyuv/video_common.h
+c0000000051EE36BB00000000000015D1
+t1374566075
+s5585
+
+N/Volumes/mac2/github/MediaManager/external/include/speex/speex.h
+c0000000051EE36BB000000000000367B
+t1374566075
+s13947
+
+N/Volumes/mac2/github/MediaManager/external/include/speex/speex/speex_bits.h
+c0000000051EE36BB0000000000001A0D
+t1374566075
+s6669
+
+N/Volumes/mac2/github/MediaManager/external/include/speex/speex/speex_preprocess.h
+c0000000051EE36BB00000000000021A1
+t1374566075
+s8609
+
+N/Volumes/mac2/github/MediaManager/external/include/speex/speex/speex_types.h
+c0000000051EE36BB0000000000000E9F
+t1374566075
+s3743
+
+N/Volumes/mac2/github/MediaManager/external/include/x264/x264.h
+c0000000051EE36BB000000000000AACD
+t1374566075
+s43725
+
+N/Volumes/mac2/github/MediaManager/external/include/x264/x264_config.h
+c0000000051EE36BB000000000000009F
+t1374566075
+s159
+
+N/Volumes/mac2/github/MediaManager/external/lib/libavcodec.a
+c0000000051EE36BB00000000007E8F20
+t1374566075
+s8294176
+
+N/Volumes/mac2/github/MediaManager/external/lib/libavdevice.a
+c0000000051EE36BB0000000000001D60
+t1374566075
+s7520
+
+N/Volumes/mac2/github/MediaManager/external/lib/libavfilter.a
+c0000000051EE36BB0000000000078C88
+t1374566075
+s494728
+
+N/Volumes/mac2/github/MediaManager/external/lib/libavformat.a
+c0000000051EE36BB00000000000A8F08
+t1374566075
+s691976
+
+N/Volumes/mac2/github/MediaManager/external/lib/libavutil.a
+c0000000051EE36BB0000000000074750
+t1374566075
+s477008
+
+N/Volumes/mac2/github/MediaManager/external/lib/libogg.a
+c0000000051EE36BB000000000000F870
+t1374566075
+s63600
+
+N/Volumes/mac2/github/MediaManager/external/lib/libspeex.a
+c0000000051EE36BB0000000000051DC0
+t1374566075
+s335296
+
+N/Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a
+c0000000051EE36BB0000000000031288
+t1374566075
+s201352
+
+N/Volumes/mac2/github/MediaManager/external/lib/libswresample.a
+c0000000051EE36BB000000000002C3F8
+t1374566075
+s181240
+
+N/Volumes/mac2/github/MediaManager/external/lib/libswscale.a
+c0000000051EE36BB00000000000AEED0
+t1374566075
+s716496
+
+N/Volumes/mac2/github/MediaManager/external/lib/libtheora.a
+c0000000051EE36BB00000000000A81C8
+t1374566075
+s688584
+
+N/Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a
+c0000000051EE36BB000000000003C798
+t1374566075
+s247704
+
+N/Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a
+c0000000051EE36BB0000000000085DC8
+t1374566075
+s548296
+
+N/Volumes/mac2/github/MediaManager/external/lib/libx264.a
+c0000000051EE36BB00000000000B0000
+t1374566075
+s720896
+
+N/Volumes/mac2/github/MediaManager/external/lib/libyuv.a
+c0000000051EE36BB000000000006DD88
+t1374566075
+s449928
+
+N/var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth
+t1374566306
+s3164548
+
+N/var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth
+t1374566306
+s2771996
+
+CBuild AST from /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m
+r0
+
+CBuild AST from /Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies23f77067d5a0b741^a0a78967d5a0b741^---0#1#0#--18"Check dependencies36"9F76DCE9-2ED9-4B7E-A35F-12708EEE3ED7-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o /Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.453681
+e396259106.538422
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o
+x/Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.mf05074226f9eb741^e50b8a226f9eb741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m0000000000000000^3137"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o corelibs/audio/KNAudioManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.dia -c /Volumes/mac2/github/MediaManager/corelibs/audio/KNAudioManager.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioManager.o36"E6EB8FAE-90FB-4D36-8535-C8AEF6466C3F-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o /Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.510118
+e396259106.558921
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o
+x/Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m51bc82226f9eb741^1e158f226f9eb741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m0000000000000000^3149"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o corelibs/utils/KNAudioRingQueue.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.dia -c /Volumes/mac2/github/MediaManager/corelibs/utils/KNAudioRingQueue.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNAudioRingQueue.o36"5490B9D1-E36C-4F5D-9A5A-0CCF9E36DC01-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.508123
+e396259106.612602
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o
+x/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.mb43d82226f9eb741^17d39c226f9eb741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m0000000000000000^3167"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o corelibs/codec/KNFFMpegX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.dia -c /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFMpegX264Encoder.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFMpegX264Encoder.o36"1BC72347-F52A-47AD-A10A-A9F8C6A56F95-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.453748
+e396259106.569593
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o
+x/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m765174226f9eb741^85d091226f9eb741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m0000000000000000^3143"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o corelibs/codec/KNFFmpegDecoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.dia -c /Volumes/mac2/github/MediaManager/corelibs/codec/KNFFmpegDecoder.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNFFmpegDecoder.o36"E462B887-2CC2-475A-B56C-11540BD0EF08-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o /Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.453781
+e396259106.641676
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o
+x/Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m944e74226f9eb741^2844a4226f9eb741^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m0000000000000000^3101"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o corelibs/video/KNGLView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.dia -c /Volumes/mac2/github/MediaManager/corelibs/video/KNGLView.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNGLView.o36"333BC299-C8AE-4360-B8C0-D6870CC46DB0-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o /Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.453796
+e396259106.508802
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o
+x/Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m3c4f74226f9eb741^ea4082226f9eb741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m0000000000000000^3137"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o corelibs/video/KNImageConvert.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.dia -c /Volumes/mac2/github/MediaManager/corelibs/video/KNImageConvert.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNImageConvert.o36"960EE94B-8352-4F90-A928-EB87296609D6-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o /Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396412762.515392
+e396412762.608606
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o
+x/Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m6118845ac7a0b741^74ce9b5ac7a0b741^---0#0#0#-19%DVTDocumentLocation2@70"file://localhost/Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m0000000000000000^3079"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o corelibs/rtp/KNRtp.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.dia -c /Volumes/mac2/github/MediaManager/corelibs/rtp/KNRtp.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNRtp.o36"F09CF565-7EB4-47EC-A80B-CB791206B882-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.453752
+e396259106.514771
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o
+x/Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.mb14f74226f9eb741^c5c783226f9eb741^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m0000000000000000^3125"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o corelibs/codec/KNSpeexCodec.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.dia -c /Volumes/mac2/github/MediaManager/corelibs/codec/KNSpeexCodec.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNSpeexCodec.o36"D93C4849-6810-48AB-8FE8-96DFFDF3EBF5-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o /Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396415469.341139
+e396415469.604942
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o
+x/Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m558457edd1a0b741^7fdc9aedd1a0b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m0000000000000000^3137"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o corelibs/video/KNVideoManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.dia -c /Volumes/mac2/github/MediaManager/corelibs/video/KNVideoManager.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNVideoManager.o36"962686FC-16B3-47F6-B205-CF615E830FCA-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o /Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396412762.515434
+e396412762.608625
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o
+x/Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.me814845ac7a0b741^5fd39b5ac7a0b741^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m0000000000000000^3131"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o corelibs/codec/KNX264Encoder.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.dia -c /Volumes/mac2/github/MediaManager/corelibs/codec/KNX264Encoder.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/KNX264Encoder.o36"FC569444-C9E4-4984-AFE2-4F257874F4A7-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396415343.447313
+e396415343.655648
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o
+x/Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m3c12736fd1a0b741^f5d7a76fd1a0b741^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m0000000000000000^3121"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o MediaManager/MediaManager.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.dia -c /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.m -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.o36"1DB6FFA4-34D9-4CEF-873D-F92A2A2513BB-
+
+CCompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o /Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s396416359.552982
+e396416359.738707
+r1
+xCompileC
+xbuild/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o
+x/Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm
+xnormal
+xarmv7
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm7ea78d67d5a0b741^a41bbd67d5a0b741^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm0000000000000000^3229"CompileC build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o corelibs/video/iOSGLView.mm normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -include /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch -MMD -MT dependencies -MF /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.d --serialize-diagnostics /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.dia -c /Volumes/mac2/github/MediaManager/corelibs/video/iOSGLView.mm -o /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/iOSGLView.o36"A85A0081-C4E3-45C3-A4D2-B62B9B0DD9A1-
+
+CLibtool /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a normal armv7
+s396416359.745603
+e396416359.846423
+r1
+xLibtool
+x/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a
+xnormal
+xarmv7
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib is a dynamic library, not added to the static library
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (analyze.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(analyze.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(analyze.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (apiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(apiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(apiwrapper.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (apiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(apiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(apiwrapper.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (audioconvert.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswresample.a(audioconvert.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(audioconvert.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (audioconvert.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(audioconvert.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(audioconvert.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (bitpack.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(bitpack.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(bitpack.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (bitstream.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(bitstream.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(bitstream.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (buffer.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(buffer.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavfilter.a(buffer.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cabac.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cabac.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(cabac.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cpu.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cpu.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cpu.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decapiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decapiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decapiwrapper.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decinfo.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decinfo.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decinfo.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decode.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decode.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decode.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (dequant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(dequant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(dequant.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encapiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encapiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encapiwrapper.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encfrag.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encfrag.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encfrag.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encinfo.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encinfo.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encinfo.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encode.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encode.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encode.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (enquant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(enquant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(enquant.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fdct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(fdct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(fdct.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fragment.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(fragment.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(fragment.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fragment.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(fragment.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(fragment.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (huffdec.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(huffdec.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(huffdec.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (huffenc.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(huffenc.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(huffenc.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (idct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(idct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(idct.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (idct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(idct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(idct.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (info.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(info.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(info.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (internal.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(internal.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(internal.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (internal.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(internal.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(internal.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (macroblock.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(macroblock.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(macroblock.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (mathops.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(mathops.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(mathops.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (mcenc.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(mcenc.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(mcenc.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (options.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(options.o) and: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(options.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (options.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(options.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(options.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(quant.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(quant.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(quant.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (rate.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(rate.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(rate.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (ratecontrol.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(ratecontrol.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(ratecontrol.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (resample.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswresample.a(resample.o) and: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(resample.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (resample.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(resample.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(resample.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (set.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(set.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(set.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (state.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(state.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(state.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (state.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(state.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(state.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (tokenize.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(tokenize.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(tokenize.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(utils.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(utils.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(utils.o) due to use of basename, truncation and blank padding
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(os_support.o) has no symbols
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Libtool build/Debug-iphoneos/libMediaManager.a normal armv733f9be67d5a0b741^66bdd867d5a0b741^-20548"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib is a dynamic library, not added to the static library/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (analyze.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(analyze.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(analyze.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (apiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(apiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(apiwrapper.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (apiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(apiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(apiwrapper.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (audioconvert.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswresample.a(audioconvert.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(audioconvert.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (audioconvert.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(audioconvert.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(audioconvert.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (bitpack.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(bitpack.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(bitpack.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (bitstream.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(bitstream.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(bitstream.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (buffer.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(buffer.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavfilter.a(buffer.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cabac.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cabac.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cabac.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(cabac.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cpu.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (cpu.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(cpu.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(cpu.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decapiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decapiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decapiwrapper.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decinfo.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decinfo.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decinfo.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (decode.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(decode.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(decode.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (dequant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(dequant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(dequant.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encapiwrapper.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encapiwrapper.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encapiwrapper.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encfrag.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encfrag.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encfrag.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encinfo.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encinfo.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encinfo.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (encode.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(encode.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(encode.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (enquant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(enquant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(enquant.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fdct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(fdct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(fdct.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fragment.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(fragment.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(fragment.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (fragment.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(fragment.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(fragment.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (huffdec.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(huffdec.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(huffdec.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (huffenc.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(huffenc.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(huffenc.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (idct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(idct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(idct.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (idct.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(idct.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(idct.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (info.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(info.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(info.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (internal.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(internal.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(internal.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (internal.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(internal.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(internal.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (macroblock.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(macroblock.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(macroblock.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (mathops.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(mathops.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(mathops.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (mcenc.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(mcenc.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(mcenc.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (options.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(options.o) and: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(options.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (options.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(options.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(options.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(quant.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(quant.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (quant.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(quant.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(quant.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (rate.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(rate.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(rate.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (ratecontrol.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(ratecontrol.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(ratecontrol.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (resample.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libswresample.a(resample.o) and: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(resample.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (resample.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libspeexdsp.a(resample.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(resample.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (set.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(set.o) and: /Volumes/mac2/github/MediaManager/external/lib/libx264.a(set.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (state.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(state.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(state.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (state.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(state.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheoradec.a(state.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (tokenize.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libtheoraenc.a(tokenize.o) and: /Volumes/mac2/github/MediaManager/external/lib/libtheora.a(tokenize.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavcodec.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(utils.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(utils.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: warning same member name (utils.o) in output file used for input files: /Volumes/mac2/github/MediaManager/external/lib/libavutil.a(utils.o) and: /Volumes/mac2/github/MediaManager/external/lib/libswscale.a(utils.o) due to use of basename, truncation and blank padding/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Volumes/mac2/github/MediaManager/external/lib/libavformat.a(os_support.o) has no symbols-0#0#0#--1697"Libtool build/Debug-iphoneos/libMediaManager.a normal armv7    cd /Volumes/mac2/github/MediaManager    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -L/Volumes/mac2/github/MediaManager/build/Debug-iphoneos -L/Volumes/mac2/github/MediaManager/external/lib -filelist /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.LinkFileList -ObjC -framework QuartzCore /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libstdc++.6.0.9.dylib -framework CoreImage -framework Accelerate -framework UIKit -framework CoreGraphics /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.1.1.3.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libresolv.dylib -framework OpenGLES -framework AVFoundation -framework AudioToolbox -framework CoreAudio -framework CoreMedia -framework CoreVideo -framework Foundation -lavcodec -lavdevice -lavfilter -lavformat -lavutil -logg -lspeex -lspeexdsp -lswresample -lswscale -ltheora -ltheoradec -ltheoraenc -lx264 -lyuv -o /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a36"0B2FAED6-B446-4748-BD0C-72E0000FE711-
+
+CPBXCp MediaManager/MediaManager.h build/Debug-iphoneos/include/MediaManager/MediaManager.h
+s396412781.944431
+e396412781.946771
+r1
+xPBXCp
+xMediaManager/MediaManager.h
+xbuild/Debug-iphoneos/include/MediaManager/MediaManager.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphoneos/include/MediaManager/MediaManager.hfddbf16dc7a0b741^a65ff26dc7a0b741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include/MediaManager/MediaManager.h0000000000000000^570"PBXCp MediaManager/MediaManager.h build/Debug-iphoneos/include/MediaManager/MediaManager.h    cd /Volumes/mac2/github/MediaManager    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Volumes/mac2/github/MediaManager/MediaManager/MediaManager.h /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include/MediaManager36"D9358652-1105-43C8-BEB6-E595211344D3-
+
+CPhaseScriptExecution "Run Script" /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh
+s396416359.871584
+e396416359.955621
+r1
+xPhaseScriptExecution
+xRun Script
+x/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'b327e167d5a0b741^fda2f467d5a0b741^---0#0#0#--18972"PhaseScriptExecution "Run Script" build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh    cd /Volumes/mac2/github/MediaManager    setenv ACTION build    setenv AD_HOC_CODE_SIGNING_ALLOWED NO    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER cyh    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS armv7    setenv ARCHS_STANDARD_32_64_BIT "armv7 armv7s"    setenv ARCHS_STANDARD_32_BIT "armv7 armv7s"    setenv ARCHS_UNIVERSAL_IPHONE_OS "armv7 armv7s"    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Volumes/mac2/github/MediaManager/build    setenv BUILD_ROOT /Volumes/mac2/github/MediaManager/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Volumes/mac2/github/MediaManager/build/Debug-iphoneos    setenv CACHE_ROOT /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_CXX_LANGUAGE_STANDARD gnu++0x    setenv CLANG_CXX_LIBRARY libc++    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_EMPTY_BODY YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/libMediaManager.a    setenv CODE_SIGNING_ALLOWED NO    setenv CODE_SIGNING_REQUIRED YES    setenv CODE_SIGN_CONTEXT_CLASS XCiPhoneOSCodeSignContext    setenv CODE_SIGN_IDENTITY "iPhone Developer"    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Volumes/mac2/github/MediaManager/build/Debug-iphoneos    setenv CONFIGURATION_TEMP_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH armv7    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources    setenv DERIVED_FILE_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/MediaManager.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME libMediaManager.a.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Volumes/mac2/github/MediaManager/build/Debug-iphoneos    setenv EFFECTIVE_PLATFORM_NAME -iphoneos    setenv EMBEDDED_PROFILE_NAME embedded.mobileprovision    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENTITLEMENTS_REQUIRED YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLE_EXTENSION a    setenv EXECUTABLE_NAME libMediaManager.a    setenv EXECUTABLE_PATH libMediaManager.a    setenv EXECUTABLE_PREFIX lib    setenv EXECUTABLE_SUFFIX .a    setenv FILE_LIST /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/FixedFiles    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Volumes/mac2/github/MediaManager/build/Debug-iphoneos\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME libMediaManager.a    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD gnu99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_SYMBOL_SEPARATION NO    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER MediaManager/MediaManager-Prefix.pch    setenv GCC_PREPROCESSOR_DEFINITIONS "DEBUG=1 "    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_THUMB_SUPPORT YES    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include\" ./external/include ./external/include/speex ./external/include/libyuv"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PREPROCESS NO    setenv INSTALL_DIR /tmp/MediaManager.dst/usr/local/lib    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER cyh    setenv INSTALL_PATH /usr/local/lib    setenv INSTALL_ROOT /tmp/MediaManager.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-LinkMap-normal-armv7.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Volumes/mac2/github/MediaManager/build/Debug-iphoneos\"  \"/Volumes/mac2/github/MediaManager/external/lib\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_armv7 /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal/armv7/MediaManager.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE staticlib    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12E55    setenv MAC_OS_X_VERSION_ACTUAL 1084    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0804    setenv NATIVE_ARCH armv7    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects    setenv OBJECT_FILE_DIR_normal /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Objects-normal    setenv OBJROOT /Volumes/mac2/github/MediaManager/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS -ObjC    setenv PACKAGE_TYPE com.apple.package-type.static-library    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PFE_FILE_C_DIALECTS "objective-c objective-c++"    setenv PKGINFO_FILE_PATH /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform    setenv PLATFORM_NAME iphoneos    setenv PLATFORM_PREFERRED_ARCH armv7    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH /usr/local/include    setenv PRODUCT_NAME MediaManager    setenv PRODUCT_SETTINGS_PATH     setenv PRODUCT_TYPE com.apple.product-type.library.static    setenv PROFILING_CODE NO    setenv PROJECT MediaManager    setenv PROJECT_DERIVED_FILE_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/DerivedSources    setenv PROJECT_DIR /Volumes/mac2/github/MediaManager    setenv PROJECT_FILE_PATH /Volumes/mac2/github/MediaManager/MediaManager.xcodeproj    setenv PROJECT_NAME MediaManager    setenv PROJECT_TEMP_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build    setenv PROJECT_TEMP_ROOT /Volumes/mac2/github/MediaManager/build    setenv PUBLIC_HEADERS_FOLDER_PATH /usr/local/include    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/ResourceManagerResources    setenv REZ_EXECUTABLE YES    setenv REZ_OBJECTS_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Volumes/mac2/github/MediaManager/build/Debug-iphoneos\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk    setenv SDK_NAME iphoneos6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP YES    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Volumes/mac2/github/MediaManager/build/Debug-iphoneos/DerivedSources    setenv SHARED_PRECOMPS_DIR /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Volumes/mac2/github/MediaManager    setenv SRCROOT /Volumes/mac2/github/MediaManager    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE debugging    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Volumes/mac2/github/MediaManager/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1    setenv TARGETNAME MediaManager    setenv TARGET_BUILD_DIR /Volumes/mac2/github/MediaManager/build/Debug-iphoneos    setenv TARGET_NAME MediaManager    setenv TARGET_TEMP_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build    setenv TEMP_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build    setenv TEMP_FILES_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build    setenv TEMP_FILE_DIR /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build    setenv TEMP_ROOT /Volumes/mac2/github/MediaManager/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNSTRIPPED_PRODUCT NO    setenv USER cyh    setenv USER_APPS_DIR /Users/cyh/Applications    setenv USER_LIBRARY_DIR /Users/cyh/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS armv7    setenv VERBOSE_PBXCP NO    setenv VERSION_INFO_BUILDER cyh    setenv VERSION_INFO_FILE MediaManager_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:MediaManager  PROJECT:MediaManager-\""    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H1503    setenv XCODE_VERSION_ACTUAL 0463    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/Script-BE1E130A175869E3009BAE3A.sh36"BB7A1145-56C3-4208-898D-CC2A217E2ED1-
+
+CProcessPCH /Volumes/mac2/github/MediaManager/DerivedData/MediaManager/Index/PrecompiledHeaders/MediaManager-Prefix-bbspaijymyrxzzdsoukteghbwoqf_ast/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.295385
+e396259106.446719
+r1
+xProcessPCH
+x/var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth
+xMediaManager/MediaManager-Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile MediaManager/MediaManager-Prefix.pch7cb54b226f9eb741^c05d72226f9eb741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Volumes/mac2/github/MediaManager/MediaManager/MediaManager-Prefix.pch0000000000000000^3170"ProcessPCH /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos --serialize-diagnostics /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.dia -c /Volumes/mac2/github/MediaManager/MediaManager/MediaManager-Prefix.pch -o /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-hdldhcfoqukurfbpdcweroihagzh/MediaManager-Prefix.pch.d36"F0D53FBA-AE36-4F5D-A0E6-67603623267D-
+
+CProcessPCH++ /Volumes/mac2/github/MediaManager/DerivedData/MediaManager/Index/PrecompiledHeaders/MediaManager-Prefix-acumatzudwybikcpsmefnwhsazgt_ast/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s396259106.295387
+e396259106.506679
+r1
+xProcessPCH++
+x/var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth
+xMediaManager/MediaManager-Prefix.pch
+xnormal
+xarmv7
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile MediaManager/MediaManager-Prefix.pch34be4b226f9eb741^7e5681226f9eb741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Volumes/mac2/github/MediaManager/MediaManager/MediaManager-Prefix.pch0000000000000000^3292"ProcessPCH++ /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth MediaManager/MediaManager-Prefix.pch normal armv7 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/mac2/github/MediaManager    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++-header -arch armv7 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-generated-files.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-own-target-headers.hmap -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-all-target-headers.hmap -iquote /Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/MediaManager-project-headers.hmap -I/Volumes/mac2/github/MediaManager/build/Debug-iphoneos/include -Iexternal/include -Iexternal/include/speex -Iexternal/include/libyuv -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources/armv7 -I/Volumes/mac2/github/MediaManager/build/MediaManager.build/Debug-iphoneos/MediaManager.build/DerivedSources -F/Volumes/mac2/github/MediaManager/build/Debug-iphoneos --serialize-diagnostics /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.dia -c /Volumes/mac2/github/MediaManager/MediaManager/MediaManager-Prefix.pch -o /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/x0/32xtyg0s3tzfklnhrvdltg7c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/MediaManager-Prefix-exwyyljfwhsmiqhgcqsybmxldqcs/MediaManager-Prefix.pch.d36"C484F486-1915-464C-99D8-7C95EC1D38FF-
+

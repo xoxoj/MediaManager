@@ -78,7 +78,7 @@
 
 - (int)encode:(uint8_t *)i420Data
 forceKeyFrame:(BOOL)forceKeyFrame
-     nalBlock:(void(^)(x264_nal_t* nals, int nalCount))nalBlock {
+     nalBlock:(void(^)(x264_nal_t* nals, int nalCount, x264_picture_t* pic))nalBlock {
 
     uint8_t* raw_pic_mem[3] = {rawPicture_.img.plane[0], rawPicture_.img.plane[1], rawPicture_.img.plane[2]};
 
@@ -103,9 +103,9 @@ forceKeyFrame:(BOOL)forceKeyFrame
     
     x264_picture_t pic_out;
     int encsize = x264_encoder_encode(encoder_, &outNal, &outNalCount, &rawPicture_, &pic_out);
-    
+
     if (nalBlock) {
-        nalBlock(outNal, outNalCount);
+        nalBlock(outNal, outNalCount, &pic_out);
     }
     
     rawPicture_.img.plane[0] = raw_pic_mem[0];

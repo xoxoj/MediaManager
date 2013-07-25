@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
+#import "Global.h"
 
 typedef enum {
     kKNGravityResizeToFit,
@@ -43,7 +44,9 @@ typedef enum {
 @interface KNVideoManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (readonly) KNCameraPosition cameraPosition;
+@property (assign, nonatomic) KNVideoVideoOrientation videoOrientation;
 @property CGSize captureSize;
+
 
 - (id)initWidthImageConvert:(KNImageConvert *)convert;
 

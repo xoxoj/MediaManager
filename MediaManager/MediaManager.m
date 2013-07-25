@@ -139,6 +139,10 @@ static MediaManager* gInstance = nil;
 //    }
 }
 
+-  (void)createEncoder {
+    
+}
+
 - (void)videoCaptureStart:(UIView *)preview
                resolution:(KNCaptureResolution)resolution
                       fps:(int)fps
@@ -146,8 +150,8 @@ static MediaManager* gInstance = nil;
           appendRTPHeader:(BOOL)appenRTP
               encodeBlock:(void(^)(uint8_t* encData, int size))encodeBlock {
 
-    _packetizeMode = videoPacketizeMode;
-    _appenVideoRTPHeader = appenRTP;
+    _packetizeMode          = videoPacketizeMode;
+    _appenVideoRTPHeader    = appenRTP;
     
     _captureFps = fps;
     [self calCaptureSize:resolution];
@@ -167,8 +171,14 @@ static MediaManager* gInstance = nil;
         _glPreview = [[iOSGLView alloc] initWithFrame:preview.bounds];
         [preview addSubview:_glPreview];
         
-        BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
-        if (!iPad) {
+//        BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+//        if (!iPad) {
+//            float tmp = _captureSize.width;
+//            _captureSize.width = _captureSize.height;
+//            _captureSize.height = tmp;
+//        }
+        
+        if (_videoMgr.videoOrientation == kKNVideoOrientationPortrait) {
             float tmp = _captureSize.width;
             _captureSize.width = _captureSize.height;
             _captureSize.height = tmp;
@@ -201,6 +211,33 @@ static MediaManager* gInstance = nil;
          {
              @synchronized(self.encSyncObject) {
                  
+                 [_x264Encoder encode:data forceKeyFrame:forceKeyFrame_ nalBlock:^(x264_nal_t *nals, int nalCount, x264_picture_t* pic) {
+                     
+                     ///STAP-A 패킷타이징.
+                     [_rtp videoPacketizeMode:_packetizeMode
+                                         nals:nals
+                                     nalCount:nalCount
+                               packetizeBlock:^(uint8_t *packetizeData, int size)
+                      {
+                          if (_packetizeMode != kKNPacketizeMode_Single_Nal) {
+                              if (_appenVideoRTPHeader) {
+                                  [_rtp appendVideoRTPHeader:packetizeData size:size rtpBlock:^(uint8_t *rtpData, int size) {
+                                      if (encodeBlock)
+                                          encodeBlock(rtpData, size);
+                                  }];
+                              } else {
+                                  if (encodeBlock)
+                                      encodeBlock(packetizeData, size);
+                              }
+                              return;
+                          }
+                          
+                          
+                      }];
+                 }];
+
+
+                 /*
                  if (_packetizeMode == kKNPacketizeMode_Single_Nal) {
                      
                      [_h264Encoder encode:data size:len completion:^(AVPacket *pkt) {
@@ -217,7 +254,7 @@ static MediaManager* gInstance = nil;
 
                  } else {
 
-                     [_x264Encoder encode:data forceKeyFrame:forceKeyFrame_ nalBlock:^(x264_nal_t *nals, int nalCount) {
+                     [_x264Encoder encode:data forceKeyFrame:forceKeyFrame_ nalBlock:^(x264_nal_t *nals, int nalCount, x264_picture_t* pic) {
                          
                          ///STAP-A 패킷타이징.
                          [_rtp videoPacketizeMode:kKNPacketizeMode_STAP_A
@@ -237,6 +274,7 @@ static MediaManager* gInstance = nil;
                          }];
                      }];
                  }
+                */
              }
              
          } previewRender:^(uint8_t *data, int w, int h) {
@@ -475,4 +513,7 @@ static MediaManager* gInstance = nil;
     [self.videoMgr changeCameraPosition:camPos];
 }
 
+- (void)setOrientation:(KNVideoVideoOrientation)orientation {
+    self.videoMgr.videoOrientation = orientation;
+}
 @end

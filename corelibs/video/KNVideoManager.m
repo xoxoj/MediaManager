@@ -30,7 +30,6 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
 @property (assign) KNCaptureResolution captureResolution;
 @property (assign) KNRawDataType rawDataType;
 
-
 - (AVCaptureSession *)initSession;
 - (AVCaptureDevice *)cameraPosition:(AVCaptureDevicePosition)position;
 - (NSString *)preset:(KNCaptureResolution)resolution;
@@ -52,6 +51,7 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
 @implementation KNVideoManager
 
 @synthesize cameraPosition      = _cameraPosition;
+@synthesize videoOrientation    = _videoOrientation;
 @synthesize captureSize         = _captureSize;
 
 @synthesize devicePostion       = _devicePostion;
@@ -187,6 +187,8 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
     
     if (_session)
         return _session;
+    
+    self.videoOrientation = kKNVideoOrientationPortrait;
     
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
     session.sessionPreset = [self preset:_captureResolution];
@@ -574,8 +576,6 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     //    size_t len = CVPixelBufferGetDataSize(imageBuffer);
     size_t width = CVPixelBufferGetWidth(imageBuffer);
     size_t height = CVPixelBufferGetHeight(imageBuffer);
-//        int width2 = width == 352 ? 320 : width;
-//        int height2 = height == 288 ? 240 : height; //멀티뷰는 320x240 맞출필요 없다.
     
     uint8_t *yPlaneAddress  = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer,0);
     UInt32 yPixelCount      =  CVPixelBufferGetWidthOfPlane(imageBuffer,0);
@@ -583,15 +583,22 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     uint8_t *uvPlaneAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer,1);
     UInt32 uvPixelCount     = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
     
+//    KNImageRotate rotete = kKnImageRotate90;
+//    BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+//    if (iPad) {
+//        rotete = kKnImageRotate180;
+//        if (self.cameraPosition == kKNCameraBack) {
+//            rotete = kKnImageRotate0;
+//        }
+//    }
+    
     KNImageRotate rotete = kKnImageRotate90;
-    BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
-    if (iPad) {
+    if (_videoOrientation == kKNVideoOrientationLandscape) {
         rotete = kKnImageRotate180;
         if (self.cameraPosition == kKNCameraBack) {
             rotete = kKnImageRotate0;
         }
     }
-    
 
     uint8_t* yuvBuffer = [_imgConvert YUV420PlaneToI420:yPlaneAddress yPixelCount:yPixelCount
                                                uvBuffer:uvPlaneAddress uvPixelCount:uvPixelCount
@@ -605,13 +612,12 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
     if (completion) {
         
-        if (!iPad) {
+        if (_videoOrientation == kKNVideoOrientationPortrait) {
             int tmp = width;
             width = height;
             height = tmp;
         }
         completion(yuvBuffer, (width * height * 3) >> 1, width, height);
-//        completion(scaleBuffer, (width2 * height2 * 3) >> 1, width2, height2);
     }
     
     CVPixelBufferUnlockBaseAddress(imageBuffer,0);

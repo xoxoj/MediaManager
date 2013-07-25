@@ -44,4 +44,6 @@
 
 - (void)changeCameraPosition:(KNCameraPosition)camPos;
 
+- (void)setOrientation:(KNVideoVideoOrientation)orientation;
+
 @end

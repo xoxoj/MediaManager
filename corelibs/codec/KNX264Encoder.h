@@ -20,6 +20,6 @@
 
 - (int)encode:(uint8_t *)i420Data
 forceKeyFrame:(BOOL)forceKeyFrame
-     nalBlock:(void(^)(x264_nal_t* nals, int nalCount))nalBlock;
+     nalBlock:(void(^)(x264_nal_t* nals, int nalCount, x264_picture_t* pic))nalBlock;
 
 @end

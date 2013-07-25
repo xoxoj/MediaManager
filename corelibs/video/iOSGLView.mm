@@ -485,7 +485,7 @@ glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYT
 - (void)dealloc
 {
     [EAGLContext setCurrentContext:_context];
-    [self stopAnimation];
+//    [self stopAnimation];
     
     glDeleteRenderbuffers(1, &_renderBuffer);
     glDeleteRenderbuffers(1, &_framebuffer);

@@ -16,4 +16,11 @@ typedef enum {
     
 }KNVideoPacketizeMode;
 
+typedef enum {
+    kKNVideoOrientationPortrait,
+    kKNVideoOrientationLandscape
+}KNVideoVideoOrientation;
+
+
+
 #endif
