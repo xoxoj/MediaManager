@@ -26,7 +26,7 @@
 
 - (void)videoCaptureStop;
 
-- (void)decodeVideo:(UIView *)videoview encData:(uint8_t *)encData size:(int)size;
+- (void)decodeVideo:(UIView *)videoview encData:(uint8_t *)encData size:(int)size packetizeMode:(KNVideoPacketizeMode)videoPacketizeMode;
 
 - (void)audioCaptureStartAppendRTPHeader:(BOOL)appendRTP encodeBlock:(void(^)(uint8_t* encSpeex, int size))encodeBlock;
 

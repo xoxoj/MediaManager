@@ -104,17 +104,13 @@
     
     _encCtx->codec_id   = AV_CODEC_ID_H264;
     _encCtx->pix_fmt    = PIX_FMT_YUV420P;
-    _encCtx->bit_rate   = 320000;
+//    _encCtx->bit_rate   = 320000;
     _encCtx->width      = _encSize.width;
     _encCtx->height     = _encSize.height;
     _encCtx->time_base  = (AVRational){1,_gop};
     _encCtx->gop_size   = _gop * 5;
     _encCtx->profile    = FF_PROFILE_H264_BASELINE;
-
-//    _encCtx->flags      |= CODEC_FLAG_CLOSED_GOP;
-//    _encCtx->rtp_payload_size = 1200;
-    
-//    _encCtx->flags      |= CODEC_FLAG_GLOBAL_HEADER;
+    _encCtx->flags      |= CODEC_FLAG_GLOBAL_HEADER;
 
 
     _rawFrame = avcodec_alloc_frame();
@@ -134,9 +130,9 @@
     AVDictionary* opts = 0;
     av_dict_set(&opts, "vprofile", "baseline", 0);
     av_dict_set(&opts, "tune", "zerolatency", 0);
-    av_dict_set(&opts, "preset", "ultrafast", 0);
+    av_dict_set(&opts, "preset", "veryfast", 0);
     
-    if (avcodec_open2(_encCtx, _encCodec, NULL) < 0) {
+    if (avcodec_open2(_encCtx, _encCodec, &opts) < 0) {
         NSLog(@"avcodec_open2 error.");
         return NO;
     }

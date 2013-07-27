@@ -211,6 +211,7 @@ static MediaManager* gInstance = nil;
          {
              @synchronized(self.encSyncObject) {
                  
+                 /*
                  [_x264Encoder encode:data forceKeyFrame:forceKeyFrame_ nalBlock:^(x264_nal_t *nals, int nalCount, x264_picture_t* pic) {
                      
                      ///STAP-A 패킷타이징.
@@ -235,9 +236,8 @@ static MediaManager* gInstance = nil;
                           
                       }];
                  }];
+                */
 
-
-                 /*
                  if (_packetizeMode == kKNPacketizeMode_Single_Nal) {
                      
                      [_h264Encoder encode:data size:len completion:^(AVPacket *pkt) {
@@ -274,7 +274,6 @@ static MediaManager* gInstance = nil;
                          }];
                      }];
                  }
-                */
              }
              
          } previewRender:^(uint8_t *data, int w, int h) {
@@ -309,7 +308,7 @@ static MediaManager* gInstance = nil;
     _rtp = nil;
 }
 
-- (void)decodeVideo:(UIView *)videoview encData:(uint8_t *)encData size:(int)size {
+- (void)decodeVideo:(UIView *)videoview encData:(uint8_t *)encData size:(int)size packetizeMode:(KNVideoPacketizeMode)videoPacketizeMode {
 
     if (_videoDecoder == nil) {
         _videoDecoder = [[KNFFmpegDecoder alloc] initWithVideoCodecID:AV_CODEC_ID_H264
@@ -325,15 +324,22 @@ static MediaManager* gInstance = nil;
         });
     }
     
-    [_rtp videoDePacketizeMode:kKNPacketizeMode_STAP_A
-                          data:encData
-                          size:size
-              dePacketizeBlock:^(uint8_t *packetizeData, int size)
-    {
-        [_videoDecoder decodeVideo3:packetizeData size:size completion:^(uint8_t *data, int size, int w, int h) {
+    if (videoPacketizeMode == kKNPacketizeMode_STAP_A) {
+    
+        [_rtp videoDePacketizeMode:kKNPacketizeMode_STAP_A
+                              data:encData
+                              size:size
+                  dePacketizeBlock:^(uint8_t *packetizeData, int size)
+        {
+            [_videoDecoder decodeVideo3:packetizeData size:size completion:^(uint8_t *data, int size, int w, int h) {
+                [_glvideoview setBufferYUV2:data andWidth:w andHeight:h];
+            }];
+        }];
+    } else {
+        [_videoDecoder decodeVideo3:encData size:size completion:^(uint8_t *data, int size, int w, int h) {
             [_glvideoview setBufferYUV2:data andWidth:w andHeight:h];
         }];
-    }];
+    }
 }
 
 - (void)audioCaptureStartAppendRTPHeader:(BOOL)appendRTP encodeBlock:(void(^)(uint8_t* encSpeex, int size))encodeBlock {
