@@ -8,12 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
-
-#define kSamplerate8k               8000.0
-#define kSamplerate16k              16000.0
-#define kSamplerate22k              22050.0
-#define kSamplerate32k              32000.0
-#define kSamplerate44k              44100.0
+#import "Global.h"
 
 @interface KNAudioManager : NSObject
 

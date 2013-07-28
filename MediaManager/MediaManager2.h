@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Global.h"
 #import "MediaVideoParam.h"
+#import "MediaAudioParam.h"
+
 
 @interface MediaManager2 : NSObject
 
@@ -20,5 +22,9 @@
 - (void)startVideoWithParam:(MediaVideoParam *)videoParam;
 - (void)stopVideo;
 - (void)decodeVideoWithEncData:(uint8_t *)encData size:(int)size;
+
+- (void)startAudioWithParam:(MediaAudioParam *)audioParam;
+- (void)stopAudio;
+- (void)decodeAudioWithEncData:(uint8_t *)encData size:(int)size;
 
 @end

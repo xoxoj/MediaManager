@@ -8,6 +8,7 @@
 
 #import "MediaManager2.h"
 #import "KNVideoManager.h"
+#import "KNAudioManager.h"
 #import "KNImageConvert.h"
 #import "KNFFMpegX264Encoder.h"
 #import "KNFFmpegDecoder.h"
@@ -17,13 +18,19 @@
 #import "KNRtp.h"
 #import "KNFFmpegDecoder.h"
 #import "KNVP8Decoder.h"
+#import "KNAudioRingQueue.h"
+#import "KNSpeexCodec.h"
+#import "KNOpusEncoder.h"
+#import "KNOpusDecoder.h"
 
 static MediaManager2* gInstance = nil;
 
 @interface MediaManager2 ()
 
 @property (retain, nonatomic) MediaVideoParam* videoParam;
+@property (retain, nonatomic) MediaAudioParam* audioParam;
 @property (retain, nonatomic) KNVideoManager* videoMgr;
+@property (retain, nonatomic) KNAudioManager* audioMgr;
 @property (retain, nonatomic) KNImageConvert* imgConvert;
 @property (retain, nonatomic) KNFFMpegX264Encoder* h264Encoder;
 @property (retain, nonatomic) KNX264Encoder* x264Encoder;
@@ -35,12 +42,26 @@ static MediaManager2* gInstance = nil;
 @property (retain, nonatomic) KNFFmpegDecoder* videoDecoderFF;
 @property (retain, nonatomic) KNVP8Decoder* videoDecoderVP8;
 
+@property (retain, nonatomic) KNSpeexCodec* speexCodec;
+@property (retain, nonatomic) KNOpusEncoder* opusEncoder;
+@property (retain, nonatomic) KNOpusDecoder* opusDecoder;
+@property (retain, nonatomic) KNAudioRingQueue* captureAudioQueue;
+@property (retain, nonatomic) KNAudioRingQueue* decAudioQueue;
+@property (retain, nonatomic) KNAudioRingQueue* sendPacketAudioQueue;
+
+
 - (void)createVideoEncoder;
 - (void)createVideoDecoder;
-- (void)startCapture;
+- (void)createAudioEncoder;
+- (void)createAudioDecoder;
+- (void)startVideoCapture;
+- (void)startAudioCapture;
 - (void)encodeProcessFFMpegH264:(uint8_t *)encBuffer size:(int)size;
 - (void)encodeProcessX264:(uint8_t *)encBuffer size:(int)size;
 - (void)encodeProcessVP8:(uint8_t *)encBuffer size:(int)size;
+- (void)encodeAudioProcess;
+- (void)encodeProcessSpeex;
+- (void)encodeProcessOpus;
 - (void)paketized:(x264_nal_t *)nals nalCount:(int)nalCount;
 - (void)decodeSingleNal:(uint8_t *)encBuffer size:(int)size;
 - (void)decodeSTAP_A:(uint8_t *)encBuffer size:(int)size;
@@ -60,6 +81,13 @@ static MediaManager2* gInstance = nil;
 @synthesize isRequestKeyFrame       = _isRequestKeyFrame;
 @synthesize videoDecoderFF          = _videoDecoderFF;
 @synthesize videoDecoderVP8         = _videoDecoderVP8;
+@synthesize speexCodec              = _speexCodec;
+@synthesize opusEncoder             = _opusEncoder;
+@synthesize opusDecoder             = _opusDecoder;
+@synthesize captureAudioQueue       = _captureAudioQueue;
+@synthesize decAudioQueue           = _decAudioQueue;
+@synthesize sendPacketAudioQueue    = _sendPacketAudioQueue;;
+
 
 #pragma mark - Cycle
 + (MediaManager2 *)sharedObject {
@@ -91,12 +119,13 @@ static MediaManager2* gInstance = nil;
     
     [self createVideoEncoder];
     [self createVideoDecoder];
-    [self startCapture];
+    [self startVideoCapture];
 }
 
 - (void)stopVideo {
     
     [_videoMgr stopVideo];
+    [_videoMgr release];
     
     [_videoParam release];
     _videoParam = nil;
@@ -127,6 +156,83 @@ static MediaManager2* gInstance = nil;
     
     [_rtp release];
     _rtp = nil;
+}
+
+- (void)startAudioWithParam:(MediaAudioParam *)audioParam {
+    
+    self.audioParam = audioParam;
+    
+    [self createAudioEncoder];
+    [self createAudioDecoder];
+    [self startAudioCapture];
+}
+
+- (void)stopAudio {
+    
+    [_audioMgr stopRecording];
+    [_audioMgr release];
+    _audioMgr = nil;
+    
+    [_speexCodec release];
+    _speexCodec = nil;
+    
+    [_opusEncoder release];
+    _opusEncoder = nil;
+    
+    [_opusDecoder release];
+    _opusDecoder = nil;
+    
+    [_captureAudioQueue release];
+    _captureAudioQueue = nil;
+    
+    [_decAudioQueue release];
+    _decAudioQueue = nil;
+    
+    [_sendPacketAudioQueue release];
+    _sendPacketAudioQueue = nil;
+
+    [_audioParam release];
+    _audioParam = nil;
+}
+
+- (void)decodeVideoWithEncData:(uint8_t *)encData size:(int)size {
+    
+    @synchronized(self){
+        
+        if (_videoParam.decVideoCodec == kKNVideoH264) {
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_Single_Nal) {
+                [self decodeSingleNal:encData size:size];
+                return;
+            }
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_STAP_A) {
+                [self decodeSTAP_A:encData size:size];
+                return;
+            }
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_FU_A) {
+                return;
+            }
+            
+            return;
+        }
+        
+        
+        if (_videoParam.decVideoCodec == kKNVideoVP8) {
+            [_videoDecoderVP8 decode:encData size:size completion:^(uint8_t *decData, int decSize, int w, int h) {
+                [_glPeerview setBufferYUV2:decData andWidth:w andHeight:h];
+            }];
+            return;
+        }
+    }
+}
+
+- (void)decodeAudioWithEncData:(uint8_t *)encData size:(int)size {
+    
+    [_speexCodec decode:encData size:size completion:^(int16_t *rawBuff, int rawSize) {
+        [_decAudioQueue write:(uint8_t *)rawBuff size:rawSize * sizeof(int16_t) completion:nil];
+    }];
 }
 
 #pragma mark - Private
@@ -189,8 +295,7 @@ static MediaManager2* gInstance = nil;
     }
 }
 
-
-- (void)startCapture {
+- (void)startVideoCapture {
     
     ///프리뷰 생성.
     if (_videoParam.viewPreview) {
@@ -245,6 +350,59 @@ static MediaManager2* gInstance = nil;
      }];
 }
 
+- (void)createAudioEncoder {
+    
+    if (_audioParam.encAudioCodec == kKNAudioSpeex) {
+        _speexCodec = [[KNSpeexCodec alloc] initWithBandwidth:kSpeexWide quality:8];
+        return;
+    }
+    
+    if (_audioParam.encAudioCodec == kKNAudioOpus) {
+        _opusEncoder = [[KNOpusEncoder alloc] initWithSampleRate:_audioParam.samplerate channels:_audioParam.channels];
+        return;
+    }
+}
+
+- (void)createAudioDecoder {
+    
+    if (_audioParam.encAudioCodec == kKNAudioSpeex) {
+        if (_speexCodec == nil)
+            _speexCodec = [[KNSpeexCodec alloc] initWithBandwidth:kSpeexWide quality:8];
+        return;
+    }
+
+
+    if (_audioParam.encAudioCodec == kKNAudioOpus) {
+        _opusEncoder = [[KNOpusEncoder alloc] initWithSampleRate:_audioParam.samplerate channels:_audioParam.channels];
+        return;
+    }
+}
+
+
+- (void)startAudioCapture {
+
+    //Audio Raw size : 320Byte / 20ms
+    //Audio Speex Encoded Size : 70Byte / 20ms
+    _captureAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:320 * 50];
+    _decAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 50];
+    _sendPacketAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 4];
+
+    
+    _audioMgr = [[KNAudioManager alloc] initWithSameperate:_audioParam.samplerate];
+    [_audioMgr startRecording:^(uint8_t *pcmData, int size) {
+        [_captureAudioQueue write:pcmData size:size completion:nil];
+        [self encodeAudioProcess];
+    }];
+    
+    [_audioMgr setPlayBlock:^(uint8_t *playBuffer, int size) {
+        @synchronized(_decAudioQueue) {
+            [_decAudioQueue read:size readBlock:^(uint8_t *buffer, int readSize) {
+                memcpy(playBuffer, buffer, readSize);
+            }];
+        }
+    }];
+}
+
 - (void)decodeVideo:(UIView *)videoview
             encData:(uint8_t *)encData
                size:(int)size
@@ -256,7 +414,7 @@ static MediaManager2* gInstance = nil;
 - (void)encodeProcessFFMpegH264:(uint8_t *)encBuffer size:(int)size {
     
     [_h264Encoder encode:encBuffer size:size completion:^(AVPacket *pkt) {
-        blockEncOutput pfnEncOut = [_videoParam getEncOuputBlock];
+        blockEncVideoOutput pfnEncOut = [_videoParam getEncOuputBlock];
         if (pfnEncOut)
             pfnEncOut(pkt->data, pkt->size);
     }];
@@ -276,11 +434,42 @@ static MediaManager2* gInstance = nil;
 - (void)encodeProcessVP8:(uint8_t *)encBuffer size:(int)size {
     
     [_vp8Encoder encode:encBuffer completion:^(uint8_t *encBuffer, int size) {
-        blockEncOutput pfnEncOut = [_videoParam getEncOuputBlock];
+        blockEncVideoOutput pfnEncOut = [_videoParam getEncOuputBlock];
         if (pfnEncOut)
             pfnEncOut(encBuffer, size);
     }];
 }
+
+- (void)encodeAudioProcess {
+    
+    if (_audioParam.encAudioCodec == kKNAudioSpeex) {
+        [self encodeProcessSpeex];
+        return;
+    }
+    
+    if (_audioParam.encAudioCodec == kKNAudioOpus) {
+        [self encodeProcessOpus];
+        return;
+    }
+}
+
+- (void)encodeProcessSpeex {
+    
+    int readSize = _speexCodec.encFrameSize * sizeof(int16_t);
+    [_captureAudioQueue read:readSize readBlock:^(uint8_t *buffer, int readSize) {
+        [_speexCodec encode:(int16_t *)buffer size:readSize / sizeof(int16_t) completion:^(uint8_t *encBuff, int encSize) {
+            blockEncAudioOutput fpnEncOut = [_audioParam getEncodeBlock];
+            if (fpnEncOut) {
+                fpnEncOut(encBuff, encSize);
+            }
+        }];
+    }];
+}
+
+- (void)encodeProcessOpus {
+    
+}
+
 
 - (void)paketized:(x264_nal_t *)nals nalCount:(int)nalCount {
     
@@ -293,12 +482,12 @@ static MediaManager2* gInstance = nil;
              if (_videoParam.appendRtpHeader) {
                  [_rtp appendVideoRTPHeader:packetizeData size:size rtpBlock:^(uint8_t *rtpData, int size) {
                      
-                     blockEncOutput pfnEncOut = [_videoParam getEncOuputBlock];
+                     blockEncVideoOutput pfnEncOut = [_videoParam getEncOuputBlock];
                      if (pfnEncOut)
                          pfnEncOut(rtpData, size);
                  }];
              } else {
-                 blockEncOutput pfnEncOut = [_videoParam getEncOuputBlock];
+                 blockEncVideoOutput pfnEncOut = [_videoParam getEncOuputBlock];
                  if (pfnEncOut)
                      pfnEncOut(packetizeData, size);
              }
@@ -335,36 +524,5 @@ static MediaManager2* gInstance = nil;
 
 
 
-- (void)decodeVideoWithEncData:(uint8_t *)encData size:(int)size {
-    
-    @synchronized(self){
-    
-        if (_videoParam.decVideoCodec == kKNVideoH264) {
-            
-            if (_videoParam.packetizeMode == kKNPacketizeMode_Single_Nal) {
-                [self decodeSingleNal:encData size:size];
-                return;
-            }
-            
-            if (_videoParam.packetizeMode == kKNPacketizeMode_STAP_A) {
-                [self decodeSTAP_A:encData size:size];
-                return;
-            }
-            
-            if (_videoParam.packetizeMode == kKNPacketizeMode_FU_A) {
-                return;
-            }
 
-            return;
-        }
-        
-        
-        if (_videoParam.decVideoCodec == kKNVideoVP8) {
-            [_videoDecoderVP8 decode:encData size:size completion:^(uint8_t *decData, int decSize, int w, int h) {
-                [_glPeerview setBufferYUV2:decData andWidth:w andHeight:h];
-            }];
-            return;
-        }
-    }
-}
 @end

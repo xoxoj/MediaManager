@@ -9,6 +9,12 @@
 #ifndef MediaManager_Global_h
 #define MediaManager_Global_h
 
+#define kSamplerate8k               8000.0
+#define kSamplerate16k              16000.0
+#define kSamplerate22k              22050.0
+#define kSamplerate32k              32000.0
+#define kSamplerate44k              44100.0
+
 typedef enum {
     kKNPacketizeMode_Single_Nal,
     kKNPacketizeMode_FU_A, //<<---미구현
@@ -57,7 +63,8 @@ typedef enum {
 }KNVideoType;
 
 typedef enum {
-    kAudioSpeex
+    kKNAudioSpeex,
+    kKNAudioOpus
 }KNAudioType;
 
 

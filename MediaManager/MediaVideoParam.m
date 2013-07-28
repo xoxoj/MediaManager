@@ -9,7 +9,7 @@
 #import "MediaVideoParam.h"
 
 @interface MediaVideoParam () {
-    blockEncOutput blkEncOutput_;
+    blockEncVideoOutput blkEncVideoOutput_;
 //    blockDecOutput blkDecOutput_;
 }
 @end
@@ -33,9 +33,9 @@
     [_viewPreview release];
     [_viewPeerview release];
     
-    if (blkEncOutput_) {
-        [blkEncOutput_ release];
-        blkEncOutput_ = nil;
+    if (blkEncVideoOutput_) {
+        [blkEncVideoOutput_ release];
+        blkEncVideoOutput_ = nil;
     }
     
 //    if (blkDecOutput_) {
@@ -54,16 +54,16 @@
     return self;
 }
 
-- (void)setEncOuputBlock:(blockEncOutput)encOut {
+- (void)setEncOuputBlock:(blockEncVideoOutput)encOut {
     
-    if (blkEncOutput_) {
-        [blkEncOutput_ release];
+    if (blkEncVideoOutput_) {
+        [blkEncVideoOutput_ release];
     }
-    blkEncOutput_ = [encOut copy];
+    blkEncVideoOutput_ = [encOut copy];
 }
 
-- (blockEncOutput)getEncOuputBlock {
-    return blkEncOutput_;
+- (blockEncVideoOutput)getEncOuputBlock {
+    return blkEncVideoOutput_;
 }
 
 //- (void)setDecOuputBlock:(blockDecOutput)decOut {

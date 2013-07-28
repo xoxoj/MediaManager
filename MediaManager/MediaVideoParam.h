@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "Global.h"
 
-typedef void(^blockEncOutput)(uint8_t* encBuffer, int size);
+typedef void(^blockEncVideoOutput)(uint8_t* encBuffer, int size);
 //typedef void(^blockDecOutput)(uint8_t* decBuffer, int size);
 
 @interface MediaVideoParam : NSObject
@@ -30,8 +30,8 @@ typedef void(^blockEncOutput)(uint8_t* encBuffer, int size);
 /**
     인코딩된 데이터를 받을 블록.
  */
-- (void)setEncOuputBlock:(blockEncOutput)encOut;
-- (blockEncOutput)getEncOuputBlock;
+- (void)setEncOuputBlock:(blockEncVideoOutput)encOut;
+- (blockEncVideoOutput)getEncOuputBlock;
 
 
 ///**
