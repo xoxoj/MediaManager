@@ -188,8 +188,6 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
     if (_session)
         return _session;
     
-    self.videoOrientation = kKNVideoOrientationPortrait;
-    
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
     session.sessionPreset = [self preset:_captureResolution];
     
@@ -582,15 +580,6 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
     uint8_t *uvPlaneAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer,1);
     UInt32 uvPixelCount     = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
-    
-//    KNImageRotate rotete = kKnImageRotate90;
-//    BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
-//    if (iPad) {
-//        rotete = kKnImageRotate180;
-//        if (self.cameraPosition == kKNCameraBack) {
-//            rotete = kKnImageRotate0;
-//        }
-//    }
     
     KNImageRotate rotete = kKnImageRotate90;
     if (_videoOrientation == kKNVideoOrientationLandscape) {

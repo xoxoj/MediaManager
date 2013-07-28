@@ -22,5 +22,43 @@ typedef enum {
 }KNVideoVideoOrientation;
 
 
+typedef enum {
+    kKNGravityResizeToFit,
+    kKNGravityAspectFill,
+    kKNGravityAspectFit
+}KNPreviewGravity;
+
+typedef enum {
+    kKNCameraFront,
+    kKNCameraBack,
+    kKNCameraOff,
+}KNCameraPosition;
+
+
+typedef enum {
+    kKNCaptureHigh,
+    kKNCaptureMedium,
+    kKNCaptureLow,
+    kKNCapture288,
+    kKNCapture480,
+    kKNCapture720,
+    kKNCapture1080
+}KNCaptureResolution;
+
+typedef enum {
+    kKNRawDataRGB32,
+    kKNRawDataYUV420Planar
+}KNRawDataType;
+
+
+typedef enum {
+    kKNVideoH264,
+    kKNVideoVP8
+}KNVideoType;
+
+typedef enum {
+    kAudioSpeex
+}KNAudioType;
+
 
 #endif

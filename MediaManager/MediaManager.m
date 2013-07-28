@@ -171,13 +171,6 @@ static MediaManager* gInstance = nil;
         _glPreview = [[iOSGLView alloc] initWithFrame:preview.bounds];
         [preview addSubview:_glPreview];
         
-//        BOOL iPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
-//        if (!iPad) {
-//            float tmp = _captureSize.width;
-//            _captureSize.width = _captureSize.height;
-//            _captureSize.height = tmp;
-//        }
-        
         if (_videoMgr.videoOrientation == kKNVideoOrientationPortrait) {
             float tmp = _captureSize.width;
             _captureSize.width = _captureSize.height;
@@ -211,32 +204,6 @@ static MediaManager* gInstance = nil;
          {
              @synchronized(self.encSyncObject) {
                  
-                 /*
-                 [_x264Encoder encode:data forceKeyFrame:forceKeyFrame_ nalBlock:^(x264_nal_t *nals, int nalCount, x264_picture_t* pic) {
-                     
-                     ///STAP-A 패킷타이징.
-                     [_rtp videoPacketizeMode:_packetizeMode
-                                         nals:nals
-                                     nalCount:nalCount
-                               packetizeBlock:^(uint8_t *packetizeData, int size)
-                      {
-                          if (_packetizeMode != kKNPacketizeMode_Single_Nal) {
-                              if (_appenVideoRTPHeader) {
-                                  [_rtp appendVideoRTPHeader:packetizeData size:size rtpBlock:^(uint8_t *rtpData, int size) {
-                                      if (encodeBlock)
-                                          encodeBlock(rtpData, size);
-                                  }];
-                              } else {
-                                  if (encodeBlock)
-                                      encodeBlock(packetizeData, size);
-                              }
-                              return;
-                          }
-                          
-                          
-                      }];
-                 }];
-                */
 
                  if (_packetizeMode == kKNPacketizeMode_Single_Nal) {
                      

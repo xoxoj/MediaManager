@@ -11,34 +11,6 @@
 #import <UIKit/UIKit.h>
 #import "Global.h"
 
-typedef enum {
-    kKNGravityResizeToFit,
-    kKNGravityAspectFill,
-    kKNGravityAspectFit
-}KNPreviewGravity;
-
-typedef enum {
-    kKNCameraFront,
-    kKNCameraBack,
-    kKNCameraOff,
-}KNCameraPosition;
-
-
-typedef enum {
-    kKNCaptureHigh,
-    kKNCaptureMedium,
-    kKNCaptureLow,
-    kKNCapture288,
-    kKNCapture480,
-    kKNCapture720,
-    kKNCapture1080
-}KNCaptureResolution;
-
-typedef enum {
-    kKNRawDataRGB32,
-    kKNRawDataYUV420Planar
-}KNRawDataType;
-
 
 @class KNImageConvert;
 @interface KNVideoManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
