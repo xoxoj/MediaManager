@@ -32,11 +32,11 @@ static MediaManager2* gInstance = nil;
 @property (retain, nonatomic) iOSGLView* glPeerview;
 @property (retain, nonatomic) KNRtp* rtp;
 @property (assign, nonatomic) BOOL isRequestKeyFrame;
-@property (retain, nonatomic) KNFFmpegDecoder* videoDecoder;
+@property (retain, nonatomic) KNFFmpegDecoder* videoDecoderFF;
 @property (retain, nonatomic) KNVP8Decoder* videoDecoderVP8;
 
 - (void)createVideoEncoder;
-- (void)createVideoDecoderPeerView:(UIView *)peerView videoType:(KNVideoType)videType;
+- (void)createVideoDecoder;
 - (void)startCapture;
 - (void)encodeProcessFFMpegH264:(uint8_t *)encBuffer size:(int)size;
 - (void)encodeProcessX264:(uint8_t *)encBuffer size:(int)size;
@@ -58,7 +58,7 @@ static MediaManager2* gInstance = nil;
 @synthesize glPeerview              = _glPeerview;
 @synthesize rtp                     = _rtp;
 @synthesize isRequestKeyFrame       = _isRequestKeyFrame;
-@synthesize videoDecoder            = _videoDecoder;
+@synthesize videoDecoderFF          = _videoDecoderFF;
 @synthesize videoDecoderVP8         = _videoDecoderVP8;
 
 #pragma mark - Cycle
@@ -87,20 +87,19 @@ static MediaManager2* gInstance = nil;
 #pragma mark - Public
 - (void)startVideoWithParam:(MediaVideoParam *)videoParam {
     
-    if (_videoParam) {
-        NSLog(@"Aready running video.");
-        return;
-    }
-    
     self.videoParam = videoParam;
     
     [self createVideoEncoder];
+    [self createVideoDecoder];
     [self startCapture];
 }
 
 - (void)stopVideo {
     
     [_videoMgr stopVideo];
+    
+    [_videoParam release];
+    _videoParam = nil;
     
     [_imgConvert release];
     _imgConvert = nil;
@@ -114,8 +113,8 @@ static MediaManager2* gInstance = nil;
     [_vp8Encoder release];
     _vp8Encoder = nil;
     
-    [_videoDecoder release];
-    _videoDecoder = nil;
+    [_videoDecoderFF release];
+    _videoDecoderFF = nil;
     
     [_videoDecoderVP8 release];
     _videoDecoderVP8 = nil;
@@ -128,13 +127,12 @@ static MediaManager2* gInstance = nil;
     
     [_rtp release];
     _rtp = nil;
-
 }
 
 #pragma mark - Private
 - (void)createVideoEncoder {
     
-    if (_videoParam.videoCodec == kKNVideoH264) {
+    if (_videoParam.encVideoCodec == kKNVideoH264) {
         
         if (_videoParam.packetizeMode == kKNPacketizeMode_Single_Nal) {
             NSLog(@"Video Encoder : H264.");
@@ -158,7 +156,7 @@ static MediaManager2* gInstance = nil;
     }
     
     
-    if (_videoParam.videoCodec == kKNVideoVP8) {
+    if (_videoParam.encVideoCodec == kKNVideoVP8) {
         NSLog(@"Video Encoder : VP8.");
         _vp8Encoder = [[KNVP8Encoder alloc] initWithEncodeSize:[_videoParam getOrientationCaptureSize]
                                                            fps:_videoParam.captureFPS];
@@ -166,30 +164,31 @@ static MediaManager2* gInstance = nil;
     }
 }
 
-- (void)createVideoDecoderPeerView:(UIView *)peerView videoType:(KNVideoType)videType {
+- (void)createVideoDecoder {
     
-    if (_videoDecoder == nil) {
-        
-        int codecID = AV_CODEC_ID_H264;
-        if (videType == kKNVideoVP8) {
-            codecID = AV_CODEC_ID_VP6;
-        }
-        _videoDecoder = [[KNFFmpegDecoder alloc] initWithVideoCodecID:codecID
-                                                         audioCodecID:kNoCodec];
+    if ((_glPeerview == nil) &&  (_videoParam.viewPeerview)) {
+        NSLog(@"PeerView Created.");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_videoParam.viewPeerview retain];
+            _glPeerview = [[iOSGLView alloc] initWithFrame:_videoParam.viewPeerview.bounds];
+            [_videoParam.viewPeerview addSubview:_glPeerview];
+            [_videoParam.viewPeerview release];
+        });
     }
-        
-    if (_glPeerview == nil) {
-        
-        if (_glPeerview == nil) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [peerView retain];
-                _glPeerview = [[iOSGLView alloc] initWithFrame:peerView.bounds];
-                [peerView addSubview:_glPeerview];
-                [peerView release];
-            });
-        }
+
+    if (!_videoDecoderFF && _videoParam.decVideoCodec == kKNVideoH264) {
+        NSLog(@"FFMpeg Decoder Created");
+        _videoDecoderFF = [[KNFFmpegDecoder alloc] initWithVideoCodecID:AV_CODEC_ID_H264
+                                                           audioCodecID:kNoCodec];
+    }
+
+
+    if (!_videoDecoderVP8 && _videoParam.decVideoCodec == kKNVideoVP8) {
+        NSLog(@"VP8 Decoder Created");
+        _videoDecoderVP8 = [[KNVP8Decoder alloc] init];
     }
 }
+
 
 - (void)startCapture {
     
@@ -219,7 +218,7 @@ static MediaManager2* gInstance = nil;
      {
          ///인코딩
          @synchronized(self) {
-             if (_videoParam.videoCodec == kKNVideoH264) {
+             if (_videoParam.encVideoCodec == kKNVideoH264) {
                  if (_videoParam.packetizeMode == kKNPacketizeMode_Single_Nal) {
                      [self encodeProcessFFMpegH264:data size:len];
                      return;
@@ -233,7 +232,7 @@ static MediaManager2* gInstance = nil;
              }
              
              
-             if (_videoParam.videoCodec == kKNVideoVP8) {
+             if (_videoParam.encVideoCodec == kKNVideoVP8) {
                  [self encodeProcessVP8:data size:len];
                  return;
              }
@@ -252,21 +251,6 @@ static MediaManager2* gInstance = nil;
           videoType:(KNVideoType)videoType
       packetizeMode:(KNVideoPacketizeMode)packetize {
 
-    [self createVideoDecoderPeerView:videoview videoType:videoType];
-
-    if (packetize == kKNPacketizeMode_Single_Nal) {
-        [self decodeSingleNal:encData size:size];
-        return;
-    }
-    
-    if (packetize == kKNPacketizeMode_STAP_A) {
-        [self decodeSTAP_A:encData size:size];
-        return;
-    }
-    
-    if (packetize == kKNPacketizeMode_FU_A) {
-        return;
-    }
 }
 
 - (void)encodeProcessFFMpegH264:(uint8_t *)encBuffer size:(int)size {
@@ -329,7 +313,7 @@ static MediaManager2* gInstance = nil;
 
 - (void)decodeSingleNal:(uint8_t *)encBuffer size:(int)size {
 
-    [_videoDecoder decodeVideo3:encBuffer size:size completion:^(uint8_t *data, int size, int w, int h) {
+    [_videoDecoderFF decodeVideo3:encBuffer size:size completion:^(uint8_t *data, int size, int w, int h) {
         [_glPeerview setBufferYUV2:data andWidth:w andHeight:h];
     }];
 }
@@ -342,7 +326,7 @@ static MediaManager2* gInstance = nil;
                           size:size
               dePacketizeBlock:^(uint8_t *packetizeData, int size)
      {
-         [_videoDecoder decodeVideo3:packetizeData size:size completion:^(uint8_t *data, int size, int w, int h) {
+         [_videoDecoderFF decodeVideo3:packetizeData size:size completion:^(uint8_t *data, int size, int w, int h) {
              [_glPeerview setBufferYUV2:data andWidth:w andHeight:h];
          }];
      }];
@@ -351,27 +335,36 @@ static MediaManager2* gInstance = nil;
 
 
 
-- (void)decodeVideo2:(UIView *)peerView encData:(uint8_t *)encData size:(int)size {
+- (void)decodeVideoWithEncData:(uint8_t *)encData size:(int)size {
     
-    if (_videoDecoderVP8 == nil) {
-        _videoDecoderVP8 = [[KNVP8Decoder alloc] init];
-    }
+    @synchronized(self){
     
-    if (_glPeerview == nil) {
+        if (_videoParam.decVideoCodec == kKNVideoH264) {
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_Single_Nal) {
+                [self decodeSingleNal:encData size:size];
+                return;
+            }
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_STAP_A) {
+                [self decodeSTAP_A:encData size:size];
+                return;
+            }
+            
+            if (_videoParam.packetizeMode == kKNPacketizeMode_FU_A) {
+                return;
+            }
+
+            return;
+        }
         
-        if (_glPeerview == nil) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [peerView retain];
-                _glPeerview = [[iOSGLView alloc] initWithFrame:peerView.bounds];
-                [peerView addSubview:_glPeerview];
-                [peerView release];
-            });
+        
+        if (_videoParam.decVideoCodec == kKNVideoVP8) {
+            [_videoDecoderVP8 decode:encData size:size completion:^(uint8_t *decData, int decSize, int w, int h) {
+                [_glPeerview setBufferYUV2:decData andWidth:w andHeight:h];
+            }];
+            return;
         }
     }
-
-    
-    [_videoDecoderVP8 decode:encData size:size completion:^(uint8_t *decData, int decSize, int w, int h) {
-        [_glPeerview setBufferYUV2:decData andWidth:w andHeight:h];
-    }];
 }
 @end

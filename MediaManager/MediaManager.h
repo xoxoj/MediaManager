@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KNVideoManager.h"
+#import <UIKit/UIKit.h>
 #import "Global.h"
 
 @interface MediaManager : NSObject

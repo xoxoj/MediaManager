@@ -10,13 +10,16 @@
 
 @interface MediaVideoParam () {
     blockEncOutput blkEncOutput_;
+//    blockDecOutput blkDecOutput_;
 }
 @end
 
 @implementation MediaVideoParam
 
 @synthesize viewPreview             = _viewPreview;
-@synthesize videoCodec              = _videoCodec;
+@synthesize viewPeerview            = _viewPeerview;
+@synthesize encVideoCodec           = _encVideoCodec;
+@synthesize decVideoCodec           = _decVideoCodec;
 @synthesize captureResolution       = _captureResolution;
 @synthesize captureOrientation      = _captureOrientation;
 @synthesize captureFPS              = _captureFPS;
@@ -28,11 +31,18 @@
 - (void)dealloc {
     
     [_viewPreview release];
+    [_viewPeerview release];
     
     if (blkEncOutput_) {
         [blkEncOutput_ release];
         blkEncOutput_ = nil;
     }
+    
+//    if (blkDecOutput_) {
+//        [blkDecOutput_ release];
+//        blkDecOutput_ = nil;
+//    }
+
     [super dealloc];
 }
 
@@ -55,6 +65,18 @@
 - (blockEncOutput)getEncOuputBlock {
     return blkEncOutput_;
 }
+
+//- (void)setDecOuputBlock:(blockDecOutput)decOut {
+//
+//    if (blkDecOutput_) {
+//        [blkDecOutput_ release];
+//    }
+//    blkDecOutput_ = [decOut copy];
+//}
+//
+//- (blockDecOutput)detDecOuputBlock {
+//    return blkDecOutput_;
+//}
 
 - (NSString *)description {
     return nil;

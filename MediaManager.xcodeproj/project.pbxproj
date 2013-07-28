@@ -772,7 +772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp ./build/Debug-iphoneos/libMediaManager.a ./deploy/lib/\n\ncp ./MediaManager/MediaManager.h ./deploy/include/\ncp ./MediaManager/MediaManager2.h ./deploy/include/\ncp ./MediaManager/MediaVideoParam.h ./deploy/include/\ncp ./corelibs/video/KNVideoManager.h ./deploy/include/\ncp ./corelibs/Global.h ./deploy/include/\n\n\n";
+			shellScript = "cp ./build/Debug-iphoneos/libMediaManager.a ./deploy/lib/\n\ncp ./MediaManager/MediaManager.h ./deploy/include/\ncp ./MediaManager/MediaManager2.h ./deploy/include/\ncp ./MediaManager/MediaVideoParam.h ./deploy/include/\ncp ./corelibs/Global.h ./deploy/include/\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

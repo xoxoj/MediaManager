@@ -84,30 +84,27 @@
         return;
     }
     
-    NSLog(@"VP8 Decode size: %dx%d - DP : %dx%d", decImage->w, decImage->h, decImage->d_w, decImage->d_h);
-    
-    
     uint8_t* pBufferPlaneY = decImage->planes[VPX_PLANE_Y];
     uint8_t* pBufferPlaneU = decImage->planes[VPX_PLANE_U];
     uint8_t* pBufferPlaneV = decImage->planes[VPX_PLANE_V];
 
+
+    ///Copy Y.
     int row = decImage->d_w;
-    
     uint32_t y_data_size = row * decImage->d_h;
-    uint8_t* y_data = malloc(y_data_size);
-    uint8_t* y_data_p = y_data;
+    uint8_t* y_data_p = decodeBuffer_;
     for(int i=0;i<(decImage->d_h);i++) {
         memcpy(y_data_p, pBufferPlaneY, row);
         y_data_p +=row;
         pBufferPlaneY += decImage->stride[VPX_PLANE_Y];
     }
     
+    
+    ///Copy UV.
     row = (decImage->d_w + 1)>>1;
     uint32_t uv_data_size = row * ((decImage->d_h + 1) >> 1);
-    uint8_t* u_data = malloc(uv_data_size);
-    uint8_t* u_data_p = u_data;
-    uint8_t* v_data = malloc(uv_data_size);
-    uint8_t* v_data_p = v_data;
+    uint8_t* u_data_p = decodeBuffer_ + y_data_size;
+    uint8_t* v_data_p = decodeBuffer_ + y_data_size + uv_data_size;
     for(int i=0;i<((decImage->d_h + 1)>>1);i++) {
         memcpy(u_data_p, pBufferPlaneU, row);
         memcpy(v_data_p, pBufferPlaneV, row);
@@ -116,14 +113,6 @@
         pBufferPlaneU += decImage->stride[VPX_PLANE_U];
         pBufferPlaneV += decImage->stride[VPX_PLANE_V];
     }
-    
-    memcpy(decodeBuffer_, y_data, y_data_size);
-    memcpy(decodeBuffer_ + y_data_size, u_data, uv_data_size);
-    memcpy(decodeBuffer_ + y_data_size + uv_data_size, v_data, uv_data_size);
-
-    free(y_data);
-    free(u_data);
-    free(v_data);
 
     if (completion)
         completion(decodeBuffer_, y_data_size + (uv_data_size * 2), decImage->d_w, decImage->d_h);
