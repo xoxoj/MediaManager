@@ -116,8 +116,9 @@
         NSLog(@"Failed to get config: %s", vpx_codec_err_to_string(res));
         return NO;
     }
-    config_.rc_target_bitrate = _encSize.width * _encSize.height * config_.rc_target_bitrate;
+//    config_.rc_target_bitrate = _encSize.width * _encSize.height * config_.rc_target_bitrate;
 //    config_.rc_target_bitrate = _encFps;
+    config_.rc_target_bitrate = 1000;//320000;
     config_.g_w = _encSize.width;
     config_.g_h = _encSize.height;
     config_.g_pass = VPX_RC_ONE_PASS;

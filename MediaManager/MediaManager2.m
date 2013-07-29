@@ -126,15 +126,13 @@ static MediaManager2* gInstance = nil;
     
     [_videoMgr stopVideo];
     [_videoMgr release];
+    _videoMgr = nil;
     
     [_videoParam release];
     _videoParam = nil;
     
     [_imgConvert release];
     _imgConvert = nil;
-    
-    [_videoMgr release];
-    _videoMgr = nil;
     
     [_h264Encoder release];
     _h264Encoder = nil;
@@ -230,9 +228,11 @@ static MediaManager2* gInstance = nil;
 
 - (void)decodeAudioWithEncData:(uint8_t *)encData size:(int)size {
     
-    [_speexCodec decode:encData size:size completion:^(int16_t *rawBuff, int rawSize) {
-        [_decAudioQueue write:(uint8_t *)rawBuff size:rawSize * sizeof(int16_t) completion:nil];
-    }];
+    @synchronized(_decAudioQueue) {
+        [_speexCodec decode:encData size:size completion:^(int16_t *rawBuff, int rawSize) {
+            [_decAudioQueue write:(uint8_t *)rawBuff size:rawSize * sizeof(int16_t) completion:nil];
+        }];
+    }
 }
 
 #pragma mark - Private
