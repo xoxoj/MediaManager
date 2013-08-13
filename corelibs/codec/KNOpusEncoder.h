@@ -12,7 +12,9 @@
 
 @interface KNOpusEncoder : NSObject
 
+@property (assign) int frameSize;
+
 - (id)initWithSampleRate:(int)samplerate channels:(int)ch;
-- (void)encode:(const opus_int16 *)pcm size:(int)size encBlock:(void(^)(uint8_t* encBuffer, int size))encBlock;
+- (void)encode:(const opus_int16 *)pcm encBlock:(void(^)(uint8_t* encBuffer, int size))encBlock;
 
 @end

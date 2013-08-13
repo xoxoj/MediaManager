@@ -8,7 +8,7 @@
 
 #import "KNOpusEncoder.h"
 
-#define MAX_DATA_BYTES 1000
+#define MAX_DATA_BYTES sizeof(opus_int16) * 960
 
 @interface KNOpusEncoder () {
     OpusEncoder *enc_;
@@ -23,6 +23,8 @@
 
 @implementation KNOpusEncoder
 
+@synthesize frameSize = _frameSize;
+
 - (void)dealloc {
     
     [self release];
@@ -33,17 +35,19 @@
 
     self = [super init];
     if (self) {
+
+        samplerate_     = samplerate;
+        channel_        = ch;
+        _frameSize      = 960;
+
+        NSLog(@"opus_encoder_create : %d, %d", samplerate_, channel_);
         
         if ([self initCodec] == NO) {
             [self release];
             return nil;
         }
         
-        samplerate_  = samplerate;
-        channel_ = ch;
-        
-        
-        encBufferSize_ = sizeof(uint8_t) * 1500;
+        encBufferSize_ = MAX_DATA_BYTES;
         encBuffer_ = (uint8_t *)malloc(encBufferSize_);
     }
     return self;
@@ -52,7 +56,7 @@
 - (BOOL)initCodec {
     
     int encError = 0;
-    enc_ = opus_encoder_create(samplerate_, channel_, OPUS_APPLICATION_VOIP, &encError);
+    enc_ = opus_encoder_create((opus_int32)samplerate_, channel_, OPUS_APPLICATION_VOIP, &encError);
     if (encError != OPUS_OK) {
         NSLog(@"opus_encoder_create error");
         return NO;
@@ -78,9 +82,9 @@
 }
 
 
-- (void)encode:(const opus_int16 *)pcm size:(int)size encBlock:(void(^)(uint8_t* encBuffer, int size))encBlock {
+- (void)encode:(const opus_int16 *)pcm encBlock:(void(^)(uint8_t* encBuffer, int size))encBlock {
 
-    int encSize = opus_encode(enc_, pcm, size, encBuffer_, MAX_DATA_BYTES);
+    int encSize = opus_encode(enc_, pcm, _frameSize, encBuffer_, MAX_DATA_BYTES);
     if (encBlock) {
         encBlock(encBuffer_, encSize);
     }

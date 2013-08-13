@@ -119,7 +119,7 @@ static OSStatus playbackCallback(void *inRefCon,
     [super dealloc];
 }
 
-- (id)initWithSameperate:(float)samplerate {
+- (id)initWithSamplerate:(float)samplerate {
     self = [super init];
     if (self) {
         gInstance = self;

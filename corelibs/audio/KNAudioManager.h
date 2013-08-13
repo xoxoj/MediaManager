@@ -15,7 +15,7 @@
 @property (readonly) AudioComponentInstance audioUnit;
 @property (readonly) float samplerate;
 
-- (id)initWithSameperate:(float)samplerate;
+- (id)initWithSamplerate:(float)samplerate;
 
 - (void)startRecording:(void(^)(uint8_t* pcmData, int size))dataBlock;
 - (void)stopRecording;

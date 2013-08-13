@@ -313,7 +313,7 @@ static MediaManager* gInstance = nil;
     
     _appenAudioRTPHeader = appendRTP;
 
-    _audioMgr = [[KNAudioManager alloc] initWithSameperate:kSamplerate16k];
+    _audioMgr = [[KNAudioManager alloc] initWithSamplerate:kSamplerate16k];
     if (_audioMgr == nil) {
         NSLog(@"KNAudioManager nil.");
         return;

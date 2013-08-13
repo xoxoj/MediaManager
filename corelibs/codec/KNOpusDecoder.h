@@ -13,5 +13,5 @@
 @interface KNOpusDecoder : NSObject
 
 - (id)initWithSampleRate:(int)samplerate channels:(int)ch;
-- (void)encode:(uint8_t *)encData size:(int)size decBlock:(void(^)(uint8_t* decBuffer, int size))decBlock;
+- (void)decode:(uint8_t *)encData encSize:(int)encSize decBlock:(void(^)(uint8_t* decBuffer, int decSize))decBlock;
 @end

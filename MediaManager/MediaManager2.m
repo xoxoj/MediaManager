@@ -228,10 +228,25 @@ static MediaManager2* gInstance = nil;
 
 - (void)decodeAudioWithEncData:(uint8_t *)encData size:(int)size {
     
-    @synchronized(_decAudioQueue) {
-        [_speexCodec decode:encData size:size completion:^(int16_t *rawBuff, int rawSize) {
-            [_decAudioQueue write:(uint8_t *)rawBuff size:rawSize * sizeof(int16_t) completion:nil];
-        }];
+    if (_audioParam.decAudioCodec == kKNAudioSpeex) {
+        
+        @synchronized(_decAudioQueue) {
+            [_speexCodec decode:encData size:size completion:^(int16_t *rawBuff, int rawSize) {
+                [_decAudioQueue write:(uint8_t *)rawBuff size:rawSize * sizeof(int16_t) completion:nil];
+            }];
+        }
+        return;
+    }
+    
+    
+    if (_audioParam.decAudioCodec == kKNAudioOpus) {
+        
+        @synchronized(_decAudioQueue) {
+            [_opusDecoder decode:encData encSize:size decBlock:^(uint8_t *decBuffer, int decSize) {
+                [_decAudioQueue write:decBuffer size:decSize completion:nil];
+            }];
+        }
+        return;
     }
 }
 
@@ -373,27 +388,38 @@ static MediaManager2* gInstance = nil;
 
 
     if (_audioParam.encAudioCodec == kKNAudioOpus) {
-        _opusEncoder = [[KNOpusEncoder alloc] initWithSampleRate:_audioParam.samplerate channels:_audioParam.channels];
+        _opusDecoder = [[KNOpusDecoder alloc] initWithSampleRate:_audioParam.samplerate channels:_audioParam.channels];
         return;
     }
 }
 
 
 - (void)startAudioCapture {
+    
+    /*
+        오퍼스 헬리콥터소리나면 채널 2채널로 설정되어있는지 확인할것.
+     */
 
     //Audio Raw size : 320Byte / 20ms
     //Audio Speex Encoded Size : 70Byte / 20ms
-    _captureAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:320 * 50];
-    _decAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 50];
-    _sendPacketAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 4];
+    if (_audioParam.decAudioCodec == kKNAudioSpeex) {
 
+        _captureAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:320 * 50];
+        _decAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 50];
+//        _sendPacketAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:70 * 4];
+        
+    } else if (_audioParam.decAudioCodec == kKNAudioOpus) {
+
+        _captureAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:(960 * 2) * 30];
+        _decAudioQueue = [[KNAudioRingQueue alloc] initWithBufferSize:(960 * 2) * 30];
+    }
     
-    _audioMgr = [[KNAudioManager alloc] initWithSameperate:_audioParam.samplerate];
+    _audioMgr = [[KNAudioManager alloc] initWithSamplerate:_audioParam.samplerate];
     [_audioMgr startRecording:^(uint8_t *pcmData, int size) {
         [_captureAudioQueue write:pcmData size:size completion:nil];
         [self encodeAudioProcess];
     }];
-    
+
     [_audioMgr setPlayBlock:^(uint8_t *playBuffer, int size) {
         @synchronized(_decAudioQueue) {
             [_decAudioQueue read:size readBlock:^(uint8_t *buffer, int readSize) {
@@ -457,7 +483,9 @@ static MediaManager2* gInstance = nil;
     
     int readSize = _speexCodec.encFrameSize * sizeof(int16_t);
     [_captureAudioQueue read:readSize readBlock:^(uint8_t *buffer, int readSize) {
+        
         [_speexCodec encode:(int16_t *)buffer size:readSize / sizeof(int16_t) completion:^(uint8_t *encBuff, int encSize) {
+            
             blockEncAudioOutput fpnEncOut = [_audioParam getEncodeBlock];
             if (fpnEncOut) {
                 fpnEncOut(encBuff, encSize);
@@ -468,6 +496,16 @@ static MediaManager2* gInstance = nil;
 
 - (void)encodeProcessOpus {
     
+    [_captureAudioQueue read:_opusEncoder.frameSize * sizeof(opus_int16) readBlock:^(uint8_t *buffer, int readSize) {
+
+        [_opusEncoder encode:(const opus_int16 *)buffer encBlock:^(uint8_t *encBuffer, int size) {
+    
+            blockEncAudioOutput fpnEncOut = [_audioParam getEncodeBlock];
+            if (fpnEncOut) {
+                fpnEncOut(encBuffer, size);
+            }
+        }];
+    }];
 }
 
 

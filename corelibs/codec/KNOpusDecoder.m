@@ -8,7 +8,7 @@
 
 #import "KNOpusDecoder.h"
 
-#define MAX_DATA_BYTES 1000
+#define MAX_DATA_BYTES sizeof(opus_int16) * 960
 
 @interface KNOpusDecoder () {
     OpusDecoder *dec_;
@@ -17,9 +17,7 @@
     int channel_;
     
     uint32_t decBufferSize_;
-    uint16_t* decBuffer_;
-    
-    
+    opus_int16* decBuffer_;
 }
 @end
 
@@ -33,16 +31,19 @@
     
     self = [super init];
     if (self) {
-        
+
+        samplerate_ = samplerate;
+        channel_    = ch;
+
         if ([self initCodec] == NO) {
             [self release];
             return nil;
         }
-        samplerate_ = samplerate;
-        channel_ = ch;
+
+        NSLog(@"opus_decoder_create : %d, %d", samplerate_, channel_);
         
-        decBufferSize_ = sizeof(uint16_t) * 1500;
-        decBuffer_ = (uint16_t *)malloc(decBufferSize_);
+        decBufferSize_ = MAX_DATA_BYTES;
+        decBuffer_ = (opus_int16 *)malloc(decBufferSize_);
     }
     return self;
 }
@@ -50,7 +51,7 @@
 - (BOOL)initCodec {
     
     int decError = 0;
-    dec_ = opus_decoder_create(samplerate_, channel_, &decError);
+    dec_ = opus_decoder_create((opus_int32)samplerate_, channel_, &decError);
     if (decError != OPUS_OK) {
         NSLog(@"opus_decoder_create error");
         return NO;
@@ -72,15 +73,15 @@
     }
 }
 
-- (void)encode:(uint8_t *)encData size:(int)size decBlock:(void(^)(uint8_t* decBuffer, int size))decBlock {
+- (void)decode:(uint8_t *)encData encSize:(int)encSize decBlock:(void(^)(uint8_t* decBuffer, int decSize))decBlock {
 
-    int frameSize = opus_decode(dec_, encData, size, (opus_int16 *)decBuffer_, MAX_DATA_BYTES, 0);
+    int frameSize = opus_decode(dec_, encData, encSize, decBuffer_, MAX_DATA_BYTES, 0);
     if (frameSize <= 0) {
         NSLog(@"opus_decode error");
         return;
     }
     
     if (decBlock)
-        decBlock((uint8_t *)decBuffer_, frameSize * 2);
+        decBlock((uint8_t *)decBuffer_, frameSize * sizeof(opus_int16));
 }
 @end
