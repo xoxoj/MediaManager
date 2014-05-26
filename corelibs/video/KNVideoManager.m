@@ -160,10 +160,10 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
 
 - (void)changeFrameRate:(AVCaptureConnection *)conn {
     
-    if (conn.supportsVideoMinFrameDuration)
-        conn.videoMinFrameDuration = CMTimeMake(SECOND, _captureFrameRate);
-    if (conn.supportsVideoMaxFrameDuration)
-        conn.videoMaxFrameDuration = CMTimeMake(SECOND, _captureFrameRate);
+//    if (conn.supportsVideoMinFrameDuration)
+//        conn.videoMinFrameDuration = CMTimeMake(SECOND, _captureFrameRate);
+//    if (conn.supportsVideoMaxFrameDuration)
+//        conn.videoMaxFrameDuration = CMTimeMake(SECOND, _captureFrameRate);
 }
 
 - (void)autoTorch {
@@ -194,7 +194,12 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
     _devicePostion = AVCaptureDevicePositionFront;
     _cameraPosition = kKNCameraFront;
 
+    NSError* erro = nil;
     AVCaptureDevice* device = [self cameraPosition:_devicePostion];
+    [device lockForConfiguration:&erro];
+    [device setActiveVideoMinFrameDuration:CMTimeMake(1, _captureFrameRate)];
+    [device setActiveVideoMaxFrameDuration:CMTimeMake(1, 25)];
+    [device unlockForConfiguration];
     
     NSError* error = nil;
     AVCaptureDeviceInput* input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
@@ -209,14 +214,15 @@ const NSInteger DEFAULT_FRAMERATE       = 30;
     AVCaptureVideoDataOutput* output = [[AVCaptureVideoDataOutput alloc] init];
     output.alwaysDiscardsLateVideoFrames = YES;
     
-    AVCaptureConnection* connection = [output connectionWithMediaType:AVMediaTypeVideo];
-    connection.videoMinFrameDuration = CMTimeMake(1, _captureFrameRate);
-    connection.videoMaxFrameDuration = CMTimeMake(1, 25);
-    [self changeFrameRate:connection];
+//    AVCaptureConnection* connection = [output connectionWithMediaType:AVMediaTypeVideo];
+//    connection.videoMinFrameDuration = CMTimeMake(1, _captureFrameRate);
+//    connection.videoMaxFrameDuration = CMTimeMake(1, 25);
+//    [self changeFrameRate:connection];
     
     int captureType = kCVPixelFormatType_32BGRA;
     if (_rawDataType == kKNRawDataYUV420Planar)
         captureType = kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange;
+
 
     NSDictionary* videoSettings = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:captureType]
                                                               forKey:(id)kCVPixelBufferPixelFormatTypeKey];
@@ -532,7 +538,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         }];
     }
     
-    [self changeFrameRate:connection];
+//    [self changeFrameRate:connection];
 }
 
 
@@ -574,12 +580,16 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     //    size_t len = CVPixelBufferGetDataSize(imageBuffer);
     size_t width = CVPixelBufferGetWidth(imageBuffer);
     size_t height = CVPixelBufferGetHeight(imageBuffer);
+    size_t bytePerRow = (CVPixelBufferGetBytesPerRow(imageBuffer)*2/3)/16*16;
+
+
     
     uint8_t *yPlaneAddress  = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer,0);
     UInt32 yPixelCount      =  CVPixelBufferGetWidthOfPlane(imageBuffer,0);
     
     uint8_t *uvPlaneAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer,1);
-    UInt32 uvPixelCount     = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
+    UInt32 uvPixelCount     =  CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
+    
     
     KNImageRotate rotete = kKnImageRotate90;
     if (_videoOrientation == kKNVideoOrientationLandscape) {
@@ -588,16 +598,13 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
             rotete = kKnImageRotate0;
         }
     }
-
-    uint8_t* yuvBuffer = [_imgConvert YUV420PlaneToI420:yPlaneAddress yPixelCount:yPixelCount
-                                               uvBuffer:uvPlaneAddress uvPixelCount:uvPixelCount
-                                                 rotate:rotete];
     
-//    uint8_t* scaleBuffer = [_imgConvert I420Scale:yuvBuffer srcW:width srcH:height dstW:width2 dstH:height2 roatated:!iPad];
-    //    uint8_t* mirrorBuffer = [_imgConvert I420Mirror:scaleBuffer w:320 h:240];
-    
-    //    if (completion)
-    //        completion(scaleBuffer, (width2 * height2 * 3) >> 1, width2, height2);
+    uint8_t* yuvBuffer = [_imgConvert YUV420PlaneToI420:yPlaneAddress
+                                            yPixelCount:yPixelCount
+                                               uvBuffer:uvPlaneAddress
+                                           uvPixelCount:uvPixelCount
+                                                 rotate:rotete
+                                             bytePerRow:bytePerRow];
     
     if (completion) {
         

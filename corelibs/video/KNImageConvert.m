@@ -24,6 +24,7 @@
 
 @interface KNImageConvert ()
 @property (assign) uint8_t* mainBuffer;
+@property (assign) uint8_t* subBuffer;
 @property (assign) uint8_t* scaleBuffer;
 @property (assign) uint8_t* mirrorBuffer;
 @property (assign) int scaleWidth;
@@ -35,6 +36,7 @@
 
 @synthesize bufferSize      = _bufferSize;
 @synthesize mainBuffer      = _mainBuffer;
+@synthesize subBuffer       = _subBuffer;
 @synthesize scaleBuffer     = _scaleBuffer;
 @synthesize mirrorBuffer    = _mirrorBuffer;
 @synthesize width           = _width;
@@ -48,6 +50,11 @@
     if (_mainBuffer) {
         free(_mainBuffer);
         _mainBuffer = NULL;
+    }
+    
+    if (_subBuffer) {
+        free(_subBuffer);
+        _subBuffer = NULL;
     }
     
     if (_scaleBuffer) {
@@ -77,7 +84,7 @@
         
         _mainBuffer = (uint8_t *)malloc(sizeof(uint8_t) * _bufferSize);
         
-        NSLog(@"@KNImageConvert buffersize : %d.", _bufferSize);
+        NSLog(@"@KNImageConvert buffersize : %d(%dx%d).", _bufferSize, _width, _height);
     }
     return self;
 }
@@ -142,7 +149,7 @@
     return _scaleBuffer;
 }
 
-- (uint8_t *)YUV420PlaneToI420:(uint8_t *)yBuffer yPixelCount:(int)yPx uvBuffer:(uint8_t *)uvBuffer uvPixelCount:(int)uvPx rotate:(KNImageRotate)r {
+- (uint8_t *)YUV420PlaneToI420:(uint8_t *)yBuffer yPixelCount:(int)yPx uvBuffer:(uint8_t *)uvBuffer uvPixelCount:(int)uvPx rotate:(KNImageRotate)r bytePerRow:(int)bytePerRaw {
     
     int ysize = _width * _height;
     int uvsize  = ysize / 4;
@@ -150,12 +157,43 @@
     int stride = _height;
     if ((r == kKnImageRotate0) || (r == kKnImageRotate180))
         stride = _width;
+
+    uint8_t* yData = yBuffer;
+    uint8_t* uvData = uvBuffer;
     
-    NV12ToI420Rotate(yBuffer, yPx, uvBuffer, uvPx,
+    ///arm64 칩의경우 다른 사이즈가 있다.
+    if (_width != bytePerRaw) {
+        
+        if (_subBuffer == NULL)
+            _subBuffer = malloc(_bufferSize);
+
+        int src_pos = 0, dst_pos = 0;
+        for (int i = 0; i < _height; i++) {
+            memcpy(_subBuffer + dst_pos, yBuffer + src_pos, _width);
+            dst_pos += _width;
+            src_pos += bytePerRaw;
+        }
+
+        
+        src_pos = dst_pos = 0;
+        uint8_t* subUvBuffer = _subBuffer + ysize;
+        for (int i = 0; i < _height / 2; i++) {
+            memcpy(subUvBuffer + dst_pos, uvBuffer + src_pos, _width);
+            dst_pos += _width;
+            src_pos += bytePerRaw;
+        }
+        
+        yData = _subBuffer;
+        uvData = subUvBuffer;
+    }
+    
+    NV12ToI420Rotate(yData, yPx,
+                     uvData, yPx,
                      _mainBuffer, stride,
                      _mainBuffer + ysize, stride / 2,
                      _mainBuffer + ysize + uvsize, stride / 2,
                      _width, _height, (enum RotationMode)r);
+
     
     return _mainBuffer;
 }

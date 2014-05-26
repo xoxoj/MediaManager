@@ -29,7 +29,7 @@ typedef enum {
 
 - (uint8_t *)I420Scale:(uint8_t*)yuvBuffer srcW:(int)srcW srcH:(int)srcH dstW:(int)dstW dstH:(int)dstH roatated:(BOOL)isRorated;
 
-- (uint8_t *)YUV420PlaneToI420:(uint8_t *)yBuffer yPixelCount:(int)yPx uvBuffer:(uint8_t *)uvBuffer uvPixelCount:(int)uvPx rotate:(KNImageRotate)r;
+- (uint8_t *)YUV420PlaneToI420:(uint8_t *)yBuffer yPixelCount:(int)yPx uvBuffer:(uint8_t *)uvBuffer uvPixelCount:(int)uvPx rotate:(KNImageRotate)r bytePerRow:(int)bytePerRaw;
 
 - (uint8_t *)I420Mirror:(uint8_t *)i420Buffer w:(int)w h:(int)h;
 
